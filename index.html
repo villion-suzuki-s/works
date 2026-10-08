@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>制作例｜株式会社VILLION</title>
+<meta name="description" content="株式会社VILLIONの制作例。集客LP、採用LP、WordPressオリジナルテーマのコーポレートサイト、HTMLスライドの事業提案資料。いずれも素のHTML/CSSで、スマホとPCの両方に対応しています。">
+<meta name="theme-color" content="#111111">
+<style>
+:root {
+  --ink: #111111;
+  --sub: #5a5a5a;
+  --line: #e2e0db;
+  --bg: #fafaf8;
+  --white: #ffffff;
+  --accent: #2346d8;
+  --sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  --mono: "SF Mono", Menlo, Consolas, monospace;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.8; font-size: 16px; }
+h1, h2, h3, p, ul, dl, dd { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
+
+.hd { border-bottom: 1px solid var(--line); }
+.hd__in { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo { font-weight: 900; letter-spacing: .24em; font-size: 18px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
+.logo svg { width: 26px; height: 26px; }
+.hd__meta { font-size: 12px; color: var(--sub); font-family: var(--mono); letter-spacing: .08em; }
+
+.intro { padding: 56px 0 40px; display: grid; gap: 24px; }
+.intro__label { font-family: var(--mono); font-size: 12px; letter-spacing: .2em; color: var(--accent); }
+.intro h1 { font-size: clamp(30px, 7vw, 56px); font-weight: 800; line-height: 1.35; letter-spacing: .01em; }
+.intro p { color: var(--sub); max-width: 38em; }
+.intro__stack { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; list-style: none; }
+.intro__stack li { font-family: var(--mono); font-size: 12px; border: 1px solid var(--line); background: var(--white); padding: 3px 10px; border-radius: 999px; }
+@media (min-width: 960px) {
+  .intro { grid-template-columns: 1.2fr 1fr; align-items: end; padding: 96px 0 64px; gap: 64px; }
+}
+
+.works { display: grid; gap: 28px; padding-bottom: 80px; counter-reset: w; }
+.work { background: var(--white); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; display: grid; }
+.work__thumb { display: block; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--line); background: #eee; }
+.work__thumb svg { width: 100%; height: 100%; transition: transform .4s ease; }
+.work:hover .work__thumb svg { transform: scale(1.025); }
+.work__body { padding: 22px 20px 24px; display: grid; gap: 14px; align-content: start; }
+.work__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.work__no { font-family: var(--mono); font-size: 13px; color: var(--sub); }
+.work__no::before { counter-increment: w; content: counter(w, decimal-leading-zero) " / "; color: var(--ink); font-weight: 700; }
+.work__kind { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 3px; background: var(--ink); color: #fff; }
+.work h2 { font-size: 21px; font-weight: 800; line-height: 1.45; }
+.work__tech { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; list-style: none; }
+.work__tech li { font-family: var(--mono); font-size: 12px; color: var(--sub); background: var(--bg); border: 1px solid var(--line); padding: 1px 8px; border-radius: 3px; }
+.work__points { list-style: none; padding: 0; display: grid; gap: 6px; border-top: 1px dashed var(--line); padding-top: 14px; }
+.work__points li { position: relative; padding-left: 20px; font-size: 15px; line-height: 1.7; }
+.work__points li::before { content: ""; position: absolute; left: 0; top: .72em; width: 10px; height: 2px; background: var(--accent); }
+.work__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.work__link { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; text-decoration: none; padding: 10px 16px; border: 1.5px solid var(--ink); border-radius: 4px; }
+.work__link:hover { background: var(--ink); color: #fff; }
+.work__link--sub { border-color: var(--line); font-weight: 600; font-size: 14px; }
+.work__link--sub:hover { background: var(--bg); color: var(--ink); }
+.work__link span[aria-hidden] { font-family: var(--mono); }
+@media (min-width: 760px) { .works { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1100px) {
+  .work--wide { grid-column: 1 / -1; grid-template-columns: 1.25fr 1fr; }
+  .work--wide .work__thumb { aspect-ratio: auto; border-bottom: 0; border-right: 1px solid var(--line); min-height: 100%; }
+  .work--wide .work__body { padding: 36px 36px; }
+}
+
+.ft { border-top: 1px solid var(--line); padding: 32px 0 40px; font-size: 13px; color: var(--sub); }
+.ft__in { display: grid; gap: 8px; }
+.ft b { color: var(--ink); letter-spacing: .2em; }
+</style>
+</head>
+<body>
+<header class="hd">
+  <div class="wrap hd__in">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="4" fill="#111"/><path d="M6 7l7 13 7-13" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/></svg>
+      VILLION
+    </a>
+    <span class="hd__meta">WORKS</span>
+  </div>
+</header>
+
+<main>
+  <section class="intro wrap" aria-labelledby="intro-title">
+    <div>
+      <p class="intro__label">SELECTED WORKS</p>
+      <h1 id="intro-title" style="margin-top:12px">業種ごとに、<br>伝え方から設計した<br>4つの制作例。</h1>
+    </div>
+    <div style="display:grid;gap:18px">
+      <p>株式会社VILLIONは、Webサイトと業務システムの開発を行う会社です。ここでは、LP・採用ページ・コーポレートサイト（WordPressテーマ）・提案資料の4種類を掲載しています。どれもテンプレートを使わず、構成と配色を案件ごとに組み立てています。</p>
+      <ul class="intro__stack" aria-label="主な使用技術">
+        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>WordPress</li><li>SVG</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="wrap works">
+
+    <article class="work work--wide">
+      <a class="work__thumb" href="works/lp-suido/index.html" tabindex="-1" aria-hidden="true">
+        <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
+          <rect width="640" height="400" fill="#0b4fa3"/>
+          <rect width="640" height="40" fill="#fff"/><rect x="24" y="12" width="16" height="16" rx="4" fill="#0b4fa3"/><rect x="48" y="14" width="90" height="12" rx="3" fill="#1a2230"/><rect x="510" y="12" width="106" height="16" rx="3" fill="#0b4fa3"/>
+          <rect x="40" y="76" width="44" height="14" rx="2" fill="none" stroke="#fff" opacity=".7"/><rect x="90" y="76" width="44" height="14" rx="2" fill="none" stroke="#fff" opacity=".7"/>
+          <rect x="40" y="106" width="250" height="28" rx="3" fill="#fff"/><rect x="40" y="142" width="200" height="28" rx="3" fill="#ffd23f"/><rect x="40" y="178" width="170" height="28" rx="3" fill="#fff"/>
+          <rect x="40" y="226" width="80" height="54" rx="8" fill="#fff"/><rect x="128" y="226" width="80" height="54" rx="8" fill="#fff"/><rect x="216" y="226" width="80" height="54" rx="8" fill="#fff"/>
+          <rect x="40" y="298" width="150" height="40" rx="20" fill="#ffd23f"/><rect x="200" y="298" width="150" height="40" rx="20" fill="#00853c"/>
+          <circle cx="480" cy="200" r="120" fill="#3d7fd1" opacity=".55"/><path d="M480 130c-26 36-46 58-46 86a46 46 0 0 0 92 0c0-28-20-50-46-86Z" fill="#fff"/>
+          <path d="M-20 400 Q320 330 660 400Z" fill="#fff"/>
+          <!-- phone mock with fixed CTA -->
+          <g transform="translate(560 200)"><rect width="64" height="128" rx="10" fill="#1a2230"/><rect x="4" y="6" width="56" height="116" rx="6" fill="#fff"/><rect x="4" y="6" width="56" height="40" fill="#0b4fa3"/><rect x="4" y="104" width="56" height="18" fill="#eef2f7"/><rect x="7" y="107" width="22" height="12" rx="2" fill="#ffd23f"/><rect x="31" y="107" width="13" height="12" rx="2" fill="#00853c"/><rect x="46" y="107" width="11" height="12" rx="2" fill="#0b4fa3"/></g>
+        </svg>
+      </a>
+      <div class="work__body">
+        <div class="work__top"><span class="work__no">LP</span><span class="work__kind">集客LP</span></div>
+        <h2>水まわり修理サービスの集客LP「みずまわり119 港南」</h2>
+        <ul class="work__tech" aria-label="使用技術"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>インラインSVG</li></ul>
+        <ul class="work__points">
+          <li>「作業前に金額確定」を軸に、料金表とFAQで不安を先回りして解消する構成</li>
+          <li>スマホ下部に電話・LINE・フォームの固定CTA。電話番号はタップで発信</li>
+          <li>対応エリアは概略図とチップで表示し、地域名での検索流入も意識</li>
+        </ul>
+        <div class="work__links"><a class="work__link" href="works/lp-suido/index.html">ページを見る <span aria-hidden="true">→</span></a></div>
+      </div>
+    </article>
+
+    <article class="work">
+      <a class="work__thumb" href="works/lp-recruit/index.html" tabindex="-1" aria-hidden="true">
+        <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
+          <rect width="640" height="400" fill="#fbf6ee"/>
+          <path d="M420 40c110 0 200 70 200 170s-80 180-200 180-190-70-180-180S310 40 420 40Z" fill="#e4ece2"/>
+          <path d="M400 210l60-46 60 46v86H400z" fill="#fff"/><rect x="448" y="240" width="26" height="56" fill="#c46a4a"/>
+          <circle cx="330" cy="200" r="24" fill="#efe3cf"/><path d="M296 300c0-50 16-80 34-80s34 30 34 80z" fill="#5d7a62"/>
+          <rect x="40" y="56" width="110" height="10" rx="5" fill="#a2533a"/>
+          <rect x="40" y="86" width="230" height="30" fill="#efe3cf"/><rect x="40" y="86" width="220" height="24" rx="3" fill="#2b2a27"/>
+          <rect x="40" y="128" width="230" height="30" fill="#efe3cf"/><rect x="40" y="128" width="200" height="24" rx="3" fill="#2b2a27"/>
+          <rect x="40" y="180" width="200" height="8" rx="4" fill="#8a857b"/><rect x="40" y="196" width="180" height="8" rx="4" fill="#8a857b"/><rect x="40" y="212" width="160" height="8" rx="4" fill="#8a857b"/>
+          <rect x="40" y="244" width="70" height="20" rx="10" fill="#fff" stroke="#e3d9c8"/><rect x="116" y="244" width="70" height="20" rx="10" fill="#fff" stroke="#e3d9c8"/><rect x="192" y="244" width="70" height="20" rx="10" fill="#fff" stroke="#e3d9c8"/>
+          <rect x="0" y="320" width="640" height="80" fill="#3f5a45"/>
+          <rect x="40" y="342" width="140" height="36" rx="10" fill="#fff"/><rect x="196" y="342" width="90" height="36" rx="10" fill="none" stroke="#7d9a82"/><rect x="300" y="342" width="90" height="36" rx="10" fill="none" stroke="#7d9a82"/>
+        </svg>
+      </a>
+      <div class="work__body">
+        <div class="work__top"><span class="work__no">RECRUIT</span><span class="work__kind">採用LP</span></div>
+        <h2>訪問看護ステーションの看護師採用LP</h2>
+        <ul class="work__tech" aria-label="使用技術"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>インラインSVG</li></ul>
+        <ul class="work__points">
+          <li>応募をためらう理由（オンコール・単独訪問）に正面から答える構成</li>
+          <li>給与は内訳まで開示し、1日の流れはタイムラインと訪問件数の推移で表示</li>
+          <li>「見学のみ」も選べる応募フォームで、最初の一歩のハードルを下げる設計</li>
+        </ul>
+        <div class="work__links"><a class="work__link" href="works/lp-recruit/index.html">ページを見る <span aria-hidden="true">→</span></a></div>
+      </div>
+    </article>
+
+    <article class="work">
+      <a class="work__thumb" href="works/corporate/index.html" tabindex="-1" aria-hidden="true">
+        <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
+          <defs><pattern id="gr" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#2c4466" stroke-width="1"/></pattern></defs>
+          <rect width="640" height="400" fill="#10213a"/><rect width="640" height="400" fill="url(#gr)" opacity=".6"/>
+          <rect width="640" height="40" fill="#f5f5f1"/><path d="M34 10l8 4.5v9L34 28l-8-4.5v-9z" fill="#10213a"/><rect x="50" y="14" width="70" height="12" rx="2" fill="#10213a"/>
+          <rect x="400" y="14" width="40" height="10" rx="2" fill="#4d5866"/><rect x="452" y="14" width="40" height="10" rx="2" fill="#4d5866"/><rect x="510" y="10" width="100" height="20" rx="2" fill="#b23610"/>
+          <rect x="36" y="80" width="120" height="8" rx="2" fill="#ff9d7c"/>
+          <rect x="36" y="104" width="250" height="26" rx="2" fill="#fff"/><rect x="36" y="140" width="210" height="26" rx="2" fill="#fff"/>
+          <rect x="36" y="186" width="240" height="7" rx="3" fill="#8b9bb3"/><rect x="36" y="200" width="220" height="7" rx="3" fill="#8b9bb3"/>
+          <rect x="36" y="228" width="130" height="36" rx="2" fill="#b23610"/><rect x="176" y="228" width="110" height="36" rx="2" fill="none" stroke="#fff"/>
+          <g fill="none" stroke="#c9d4e3" stroke-width="1.5"><rect x="340" y="90" width="90" height="110"/><circle cx="530" cy="145" r="60"/><circle cx="530" cy="145" r="24" stroke="#ff9d7c"/></g>
+          <g stroke="#2c4466"><rect x="320" y="240" width="300" height="60" fill="none"/><path d="M420 240v60M520 240v60"/></g>
+          <rect x="336" y="256" width="40" height="6" fill="#8b9bb3"/><rect x="336" y="270" width="60" height="16" fill="#fff"/><rect x="436" y="256" width="40" height="6" fill="#8b9bb3"/><rect x="436" y="270" width="40" height="16" fill="#fff"/><rect x="536" y="256" width="40" height="6" fill="#8b9bb3"/><rect x="536" y="270" width="50" height="16" fill="#fff"/>
+          <rect x="0" y="330" width="640" height="70" fill="#f5f5f1"/><g fill="#fff" stroke="#d4d9e0"><rect x="36" y="344" width="180" height="56"/><rect x="230" y="344" width="180" height="56"/><rect x="424" y="344" width="180" height="56"/></g>
+        </svg>
+      </a>
+      <div class="work__body">
+        <div class="work__top"><span class="work__no">CORPORATE</span><span class="work__kind">コーポレートサイト</span></div>
+        <h2>精密部品メーカーのコーポレートサイト（WordPressテーマ付き）</h2>
+        <ul class="work__tech" aria-label="使用技術"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>WordPress（クラシックテーマ）</li></ul>
+        <ul class="work__points">
+          <li>トップ・事業紹介・会社概要・お問い合わせの4ページ。図面をモチーフにした設計</li>
+          <li>同じCSSを共有するWordPressオリジナルテーマ付き。お知らせは投稿から自動表示</li>
+          <li>図面添付つきの問い合わせフォーム。プラグインのショートコードにも差し替え可能</li>
+        </ul>
+        <div class="work__links">
+          <a class="work__link" href="works/corporate/index.html">サイトを見る <span aria-hidden="true">→</span></a>
+          <a class="work__link work__link--sub" href="works/corporate/wp-theme/villion-corporate/style.css">テーマのCSSを見る</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="work work--wide">
+      <a class="work__thumb" href="works/deck/index.html" tabindex="-1" aria-hidden="true">
+        <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
+          <rect width="640" height="400" fill="#0f1013"/>
+          <g transform="translate(70 60) rotate(-4 250 140)"><rect width="500" height="281" rx="4" fill="#f3f1ea"/><rect x="30" y="28" width="26" height="12" rx="2" fill="#f5a524"/><rect x="30" y="54" width="300" height="20" rx="2" fill="#16181d"/><g fill="#fff" stroke="#d8d3c4"><rect x="30" y="100" width="140" height="150" rx="8"/><rect x="180" y="100" width="140" height="150" rx="8"/><rect x="330" y="100" width="140" height="150" rx="8"/></g><rect x="194" y="80" width="112" height="190" rx="8" fill="#16181d" transform="translate(0 0)" opacity="0"/><rect x="180" y="100" width="140" height="150" rx="8" fill="#16181d"/><rect x="200" y="124" width="70" height="10" rx="2" fill="#f5a524"/><rect x="200" y="146" width="90" height="18" rx="2" fill="#f3f1ea"/></g>
+          <g transform="translate(40 40)"><rect width="500" height="281" rx="4" fill="#16181d" stroke="#2a2e37"/><rect x="34" y="40" width="80" height="10" rx="2" fill="#f5a524"/><rect x="34" y="70" width="330" height="34" rx="3" fill="#f3f1ea"/><rect x="34" y="114" width="250" height="34" rx="3" fill="#f5a524"/><rect x="34" y="176" width="260" height="10" rx="3" fill="#7d8594"/><rect x="34" y="236" width="24" height="24" rx="5" fill="#f5a524"/><rect x="66" y="243" width="120" height="10" rx="3" fill="#7d8594"/></g>
+          <rect x="250" y="356" width="140" height="4" rx="2" fill="#22252c"/><rect x="250" y="356" width="40" height="4" rx="2" fill="#f5a524"/>
+        </svg>
+      </a>
+      <div class="work__body">
+        <div class="work__top"><span class="work__no">DECK</span><span class="work__kind">提案資料</span></div>
+        <h2>受発注デジタル化サービスの事業提案資料（HTMLスライド12枚）</h2>
+        <ul class="work__tech" aria-label="使用技術"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>インラインSVG</li></ul>
+        <ul class="work__points">
+          <li>16:9を画面サイズに合わせて拡縮。矢印キー・スワイプ・ボタンで操作、印刷にも対応</li>
+          <li>課題→解決策→仕組み→収益の試算→判断基準まで、意思決定の順に組んだ構成</li>
+          <li>数字はすべて前提を明示した試算として表示し、根拠のない実績は書かない方針</li>
+        </ul>
+        <div class="work__links"><a class="work__link" href="works/deck/index.html">スライドを見る <span aria-hidden="true">→</span></a></div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer class="ft">
+  <div class="wrap ft__in">
+    <b>VILLION</b>
+    <span>株式会社VILLION　Webサイト・業務システムの設計と開発</span>
+    <span>&copy; 2026 VILLION Inc.</span>
+  </div>
+</footer>
+</body>
+</html>

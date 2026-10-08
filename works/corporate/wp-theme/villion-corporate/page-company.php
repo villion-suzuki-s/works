@@ -1,0 +1,125 @@
+<?php
+/**
+ * 固定ページ「会社概要」（スラッグ: company）
+ *
+ * @package villion-corporate
+ */
+
+get_header();
+?>
+<section class="page-hero">
+  <div class="container page-hero__in">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">トップ</a> ／ 会社概要</nav>
+    <p class="eyebrow">COMPANY</p>
+    <h1>会社概要</h1>
+    <p>創業から、小さな部品の精度に向き合ってきた会社です。</p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="msg-title">
+  <div class="container">
+    <div class="message">
+      <div>
+        <p class="eyebrow">MESSAGE</p>
+        <h2 id="msg-title" class="screen-reader-text">代表メッセージ</h2>
+        <p class="message__quote" style="margin-top:16px">「できます」と言う前に、<br>図面をいちばん深く読む。</p>
+      </div>
+      <div class="message__body">
+        <p>1978年、旋盤2台の町工場として始まった当社は、地域の機械メーカーの部品加工を通じて少しずつ設備と人を増やしてきました。</p>
+        <p>どの仕事でも大切にしているのは、加工を始める前に図面の意図をつかむことです。この部品は何に組み込まれ、どこに力がかかるのか。そこまで理解すると、公差の厳しさの理由や、コストを下げられる余地が見えてきます。</p>
+        <p>お客様の開発のパートナーとして「相談してよかった」と言っていただける工場であり続けるために、技術の継承と設備への投資を続けてまいります。</p>
+        <p class="message__sign">株式会社みなせ精工　代表取締役</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white" aria-labelledby="profile-title">
+  <div class="container two-col">
+    <div>
+      <div class="section-head">
+        <p class="eyebrow">PROFILE</p>
+        <h2 id="profile-title">会社情報</h2>
+      </div>
+      <table class="profile">
+        <tbody>
+          <tr><th scope="row">商号</th><td>株式会社みなせ精工</td></tr>
+          <tr><th scope="row">創業</th><td>1978年4月</td></tr>
+          <tr><th scope="row">設立</th><td>1986年10月</td></tr>
+          <tr><th scope="row">資本金</th><td>2,000万円</td></tr>
+          <tr><th scope="row">従業員数</th><td>32名（2026年4月時点）</td></tr>
+          <tr><th scope="row">事業内容</th><td>精密機械部品の切削加工、試作品の製作、検査・サブ組立</td></tr>
+          <tr><th scope="row">所在地</th><td>〒000-0000 長野県上田市 みなせ台工業団地 3-12</td></tr>
+          <tr><th scope="row">連絡先</th><td>TEL 000-0000-0000 ／ FAX 000-0000-0001<br>info@example.com</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="section-head">
+        <p class="eyebrow">HISTORY</p>
+        <h2>沿革</h2>
+      </div>
+      <ol class="history">
+        <li><time>1978</time><p>汎用旋盤2台で個人創業</p></li>
+        <li><time>1986</time><p>法人化し、株式会社みなせ精工を設立</p></li>
+        <li><time>1997</time><p>現所在地に新工場を建設、マシニングセンタを導入</p></li>
+        <li><time>2009</time><p>温度管理された検査室を新設、三次元測定機を導入</p></li>
+        <li><time>2018</time><p>5軸マシニングセンタを導入し、複雑形状の加工を開始</p></li>
+        <li><time>2026</time><p>生産管理をクラウド化し、見積り・進捗の共有を開始</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="access-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">ACCESS</p>
+      <h2 id="access-title">アクセス</h2>
+    </div>
+    <div class="access">
+      <div class="access__map">
+        <svg viewBox="0 0 640 360" role="img" aria-labelledby="map-t">
+          <title id="map-t">工業団地内の当社工場の位置を示した概略図。国道から工業団地入口を入り、2本目の角に工場があります</title>
+          <rect width="640" height="360" fill="#ffffff"/>
+          <g fill="#eef0ec"><rect x="40" y="40" width="160" height="110"/><rect x="40" y="200" width="160" height="120"/><rect x="250" y="40" width="150" height="110"/><rect x="450" y="40" width="150" height="110"/><rect x="450" y="200" width="150" height="120"/></g>
+          <rect x="250" y="200" width="150" height="120" fill="#10213a"/>
+          <g stroke="#d4d9e0" stroke-width="22" fill="none"><path d="M0 175h640M225 0v360M425 0v360"/></g>
+          <path d="M0 175h640" stroke="#5b6b80" stroke-width="4" stroke-dasharray="16 10"/>
+          <g font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-size="14" font-weight="700">
+            <text x="325" y="265" text-anchor="middle" fill="#ffffff">みなせ精工</text>
+            <text x="20" y="168" fill="#4d5866">国道方面</text>
+            <text x="560" y="168" fill="#4d5866">駅方面</text>
+            <text x="234" y="20" fill="#4d5866" font-size="12">工業団地入口</text>
+          </g>
+          <circle cx="325" cy="230" r="9" fill="#d6451b" stroke="#fff" stroke-width="3"/>
+        </svg>
+      </div>
+      <div>
+        <table class="profile">
+          <tbody>
+            <tr><th scope="row">住所</th><td>〒000-0000 長野県上田市 みなせ台工業団地 3-12</td></tr>
+            <tr><th scope="row">お車</th><td>高速道路のインターチェンジから約15分。来客用駐車場4台</td></tr>
+            <tr><th scope="row">電車</th><td>最寄り駅からタクシーで約10分</td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:14px;font-size:14px;color:var(--ink-sub)">工場見学をご希望の場合は、事前にご連絡ください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cta-band" aria-labelledby="cta-title">
+  <div class="container cta-band__in">
+    <div>
+      <h2 id="cta-title">図面1枚から、お気軽にご相談ください。</h2>
+      <p>「この公差で作れるか」「材質を変えてコストを下げたい」といったご相談も歓迎です。</p>
+    </div>
+    <div>
+      <a class="cta-band__tel" href="tel:000-0000-0000">000-0000-0000</a>
+      <span class="cta-band__tel-note">平日 8:30〜17:30（土日祝休み）</span>
+    </div>
+    <a class="btn" href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">フォームで問い合わせる</a>
+  </div>
+</section>
+<?php
+get_footer();

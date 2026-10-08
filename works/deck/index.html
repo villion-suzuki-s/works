@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ハッチュウボード 事業提案｜町工場の受発注をデジタルに</title>
+<meta name="description" content="地方の中小製造業向け受発注デジタル化サービス「ハッチュウボード」の事業提案資料。FAXのままでも参加できる受発注の仕組み、ビジネスモデル、試算の前提、ロードマップを12枚のスライドで説明します。">
+<meta name="theme-color" content="#16181d">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#deck">スライドへスキップ</a>
+
+<div class="stage" id="stage">
+  <main class="deck no-anim" id="deck" aria-roledescription="スライド資料" aria-label="ハッチュウボード 事業提案" tabindex="-1">
+
+    <!-- 01 表紙 -->
+    <section class="slide s-cover" aria-roledescription="スライド" aria-label="1枚目 表紙">
+      <div class="cover__grid" aria-hidden="true"></div>
+      <p class="cover__tag">事業提案　2026.10</p>
+      <h1 class="cover__title">町工場の受発注を、<br><span class="hl">FAXのまま</span>デジタルに。</h1>
+      <p class="cover__sub">地方の中小製造業向け 受発注クラウド「ハッチュウボード」</p>
+      <div class="cover__mark" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><rect x="8" y="8" width="104" height="104" rx="18" fill="#f5a524"/><rect x="28" y="30" width="64" height="12" rx="4" fill="#16181d"/><rect x="28" y="54" width="44" height="12" rx="4" fill="#16181d"/><rect x="28" y="78" width="54" height="12" rx="4" fill="#16181d"/><circle cx="88" cy="84" r="10" fill="#16181d"/></svg>
+        <span>ハッチュウボード 事業準備チーム</span>
+      </div>
+    </section>
+
+    <!-- 02 課題 -->
+    <section class="slide" aria-roledescription="スライド" aria-label="2枚目 課題">
+      <header class="s-head"><span class="s-no">01</span><p class="s-kicker">課題</p></header>
+      <h2 class="s-title">注文書は、まだ紙で届いている。</h2>
+      <div class="cols-2">
+        <div class="flowpic" aria-hidden="true">
+          <svg viewBox="0 0 560 360">
+            <g font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+              <rect x="20" y="140" width="140" height="80" rx="12" fill="#2a2e37"/><text x="90" y="186" fill="#f3f1ea">発注元</text>
+              <rect x="400" y="30" width="140" height="64" rx="12" fill="#2a2e37"/><text x="470" y="68" fill="#f3f1ea">工場 A</text>
+              <rect x="400" y="148" width="140" height="64" rx="12" fill="#2a2e37"/><text x="470" y="186" fill="#f3f1ea">工場 B</text>
+              <rect x="400" y="266" width="140" height="64" rx="12" fill="#2a2e37"/><text x="470" y="304" fill="#f3f1ea">工場 C</text>
+            </g>
+            <g stroke="#7d8594" stroke-width="2.5" fill="none" stroke-dasharray="6 6">
+              <path d="M160 170 C 260 120, 300 70, 400 62"/>
+              <path d="M160 180 H 400"/>
+              <path d="M160 190 C 260 240, 300 290, 400 298"/>
+            </g>
+            <g font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-size="15" font-weight="700">
+              <rect x="236" y="74" width="72" height="30" rx="15" fill="#f5a524"/><text x="272" y="95" text-anchor="middle" fill="#16181d">FAX</text>
+              <rect x="236" y="165" width="72" height="30" rx="15" fill="#e8e4d8"/><text x="272" y="186" text-anchor="middle" fill="#16181d">電話</text>
+              <rect x="226" y="256" width="92" height="30" rx="15" fill="#e8e4d8"/><text x="272" y="277" text-anchor="middle" fill="#16181d">メール</text>
+            </g>
+          </svg>
+        </div>
+        <ul class="pain">
+          <li><b>転記</b><span>FAXの注文書を、工場側で生産管理のExcelへ手入力している</span></li>
+          <li><b>確認の往復</b><span>納期回答・図面の版の確認が電話で行われ、記録が残らない</span></li>
+          <li><b>属人化</b><span>「誰に何をいつ頼んだか」が発注担当者の手元にしかない</span></li>
+        </ul>
+      </div>
+      <p class="s-foot">※課題は、地方の製造業の受発注業務について一般に指摘されている状況を、当チームで整理したものです。</p>
+    </section>
+
+    <!-- 03 なぜ今 -->
+    <section class="slide" aria-roledescription="スライド" aria-label="3枚目 なぜ今か">
+      <header class="s-head"><span class="s-no">02</span><p class="s-kicker">なぜ今か</p></header>
+      <h2 class="s-title">変えざるを得ない理由が、そろってきた。</h2>
+      <div class="cards-3">
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="10" y="6" width="28" height="36" rx="3" fill="none" stroke="#f5a524" stroke-width="3"/><path d="M16 16h16M16 24h16M16 32h10" stroke="#f5a524" stroke-width="3"/></svg></span>
+          <h3>制度の変化</h3>
+          <p>インボイス制度の開始（2023年10月）や、電子取引データの保存ルールの見直しにより、取引書類をデータで扱う必要性が高まっています。</p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="16" r="8" fill="none" stroke="#f5a524" stroke-width="3"/><path d="M8 42c2-10 8-14 16-14s14 4 16 14" fill="none" stroke="#f5a524" stroke-width="3"/></svg></span>
+          <h3>担い手の交代</h3>
+          <p>受発注を長年担ってきた担当者からの引き継ぎが各地で始まっています。頭の中にある段取りを、仕組みに移すタイミングです。</p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="6" y="12" width="36" height="24" rx="3" fill="none" stroke="#f5a524" stroke-width="3"/><path d="M14 30l6-8 6 5 8-11" fill="none" stroke="#f5a524" stroke-width="3"/></svg></span>
+          <h3>道具の成熟</h3>
+          <p>FAX画像の読み取り精度が上がり、スマホでの確認も一般的になりました。受注側に新しい機器を求めずに始められます。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 04 解決策 -->
+    <section class="slide s-dark" aria-roledescription="スライド" aria-label="4枚目 解決策">
+      <header class="s-head"><span class="s-no">03</span><p class="s-kicker">解決策</p></header>
+      <h2 class="s-title s-title--xl">発注元だけが変わる。<br><span class="hl">工場はFAXのままでいい。</span></h2>
+      <p class="s-lead">受発注のデジタル化が進まない最大の理由は「取引先全員にツールを入れてもらう」ことの難しさです。ハッチュウボードは、発注元がWebで注文を出し、FAXで受け取りたい工場にはFAXで届け、返信のFAXを読み取ってデータに戻します。</p>
+    </section>
+
+    <!-- 05 仕組み -->
+    <section class="slide" aria-roledescription="スライド" aria-label="5枚目 仕組み">
+      <header class="s-head"><span class="s-no">04</span><p class="s-kicker">仕組み</p></header>
+      <h2 class="s-title">注文から納期回答までが、一枚の画面に残る。</h2>
+      <div class="diagram">
+        <svg viewBox="0 0 1120 380" role="img" aria-labelledby="dg-t">
+          <title id="dg-t">発注元がハッチュウボードで注文を作成し、Web対応の工場には画面で、FAXの工場にはFAXで送信。FAXの納期回答は読み取ってデータ化され、発注元の画面に一覧で戻る仕組み図</title>
+          <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f5a524"/></marker>
+          <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7d8594"/></marker></defs>
+          <g font-family="Hiragino Sans, Noto Sans JP, sans-serif" text-anchor="middle">
+            <rect x="10" y="130" width="220" height="120" rx="14" fill="#ffffff" stroke="#d8d3c4" stroke-width="2"/>
+            <text x="120" y="182" font-size="22" font-weight="800" fill="#16181d">発注元</text>
+            <text x="120" y="212" font-size="15" fill="#545a66">Webで注文を作成</text>
+
+            <rect x="430" y="100" width="260" height="180" rx="18" fill="#16181d"/>
+            <text x="560" y="160" font-size="24" font-weight="800" fill="#f5a524">ハッチュウボード</text>
+            <text x="560" y="196" font-size="15" fill="#e8e4d8">注文書の生成・送信</text>
+            <text x="560" y="222" font-size="15" fill="#e8e4d8">FAX返信の読み取り</text>
+            <text x="560" y="248" font-size="15" fill="#e8e4d8">納期・版の履歴管理</text>
+
+            <rect x="890" y="40" width="220" height="110" rx="14" fill="#ffffff" stroke="#d8d3c4" stroke-width="2"/>
+            <text x="1000" y="88" font-size="20" font-weight="800" fill="#16181d">Web対応の工場</text>
+            <text x="1000" y="118" font-size="15" fill="#545a66">スマホで確認・回答</text>
+
+            <rect x="890" y="230" width="220" height="110" rx="14" fill="#fff6e3" stroke="#f5a524" stroke-width="2"/>
+            <text x="1000" y="278" font-size="20" font-weight="800" fill="#16181d">FAXの工場</text>
+            <text x="1000" y="308" font-size="15" fill="#545a66">今まで通りFAXで回答</text>
+          </g>
+          <g stroke-width="3" fill="none">
+            <path d="M230 175 H 425" stroke="#f5a524" marker-end="url(#ar)"/>
+            <path d="M425 215 H 235" stroke="#7d8594" marker-end="url(#ar2)" stroke-dasharray="7 6"/>
+            <path d="M690 150 C 790 150, 800 95, 885 95" stroke="#f5a524" marker-end="url(#ar)"/>
+            <path d="M690 230 C 790 230, 800 270, 885 270" stroke="#f5a524" marker-end="url(#ar)"/>
+            <path d="M885 305 C 790 330, 760 290, 695 262" stroke="#7d8594" marker-end="url(#ar2)" stroke-dasharray="7 6"/>
+          </g>
+          <g font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-size="14" font-weight="700" fill="#545a66">
+            <text x="328" y="165" text-anchor="middle">注文</text>
+            <text x="328" y="240" text-anchor="middle">納期回答の一覧</text>
+            <text x="800" y="345" text-anchor="middle">FAX返信を読み取り</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- 06 機能 -->
+    <section class="slide" aria-roledescription="スライド" aria-label="6枚目 主な機能">
+      <header class="s-head"><span class="s-no">05</span><p class="s-kicker">主な機能</p></header>
+      <h2 class="s-title">最初に作るのは、この4つだけ。</h2>
+      <div class="feat">
+        <article><span class="feat__n">A</span><h3>注文書の作成・送信</h3><p>品番・数量・希望納期・図面を添えて作成。工場ごとにWebかFAXかを自動で振り分けます。</p></article>
+        <article><span class="feat__n">B</span><h3>FAX返信の読み取り</h3><p>工場が手書きで記入した納期回答を読み取り、発注元の担当者が確認してから確定します。</p></article>
+        <article><span class="feat__n">C</span><h3>図面の版管理</h3><p>「どの版の図面で注文したか」を注文ごとに記録。差し替え時は工場へ通知します。</p></article>
+        <article><span class="feat__n">D</span><h3>納期の一覧と催促</h3><p>回答待ち・遅延の注文を一覧化。催促の連絡も画面から送れます。</p></article>
+      </div>
+      <p class="s-foot">※見積り依頼・請求書の発行は、利用状況を見て2期目以降に検討します。</p>
+    </section>
+
+    <!-- 07 ターゲット -->
+    <section class="slide" aria-roledescription="スライド" aria-label="7枚目 最初の顧客">
+      <header class="s-head"><span class="s-no">06</span><p class="s-kicker">最初の顧客</p></header>
+      <h2 class="s-title">1社ではなく「1つの取引のかたまり」に売る。</h2>
+      <div class="cols-2 cols-2--wide">
+        <div class="cluster" aria-hidden="true">
+          <svg viewBox="0 0 440 400">
+            <circle cx="220" cy="200" r="180" fill="#fff6e3"/>
+            <circle cx="220" cy="200" r="120" fill="none" stroke="#f5a524" stroke-dasharray="4 8" stroke-width="2"/>
+            <g fill="#2a2e37">
+              <circle cx="220" cy="80" r="18"/><circle cx="324" cy="140" r="18"/><circle cx="324" cy="260" r="18"/><circle cx="220" cy="320" r="18"/><circle cx="116" cy="260" r="18"/><circle cx="116" cy="140" r="18"/>
+              <circle cx="300" cy="62" r="12" opacity=".5"/><circle cx="378" cy="210" r="12" opacity=".5"/><circle cx="140" cy="348" r="12" opacity=".5"/><circle cx="60" cy="200" r="12" opacity=".5"/>
+            </g>
+            <circle cx="220" cy="200" r="54" fill="#f5a524"/>
+            <text x="220" y="207" text-anchor="middle" font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-size="20" font-weight="800" fill="#16181d">発注元</text>
+          </svg>
+        </div>
+        <div>
+          <dl class="target">
+            <div><dt>対象</dt><dd>協力工場を10〜30社持つ、地方の機械・装置メーカー（従業員50〜300名）</dd></div>
+            <div><dt>理由</dt><dd>発注元1社が導入すれば、協力工場は追加の負担なく参加できる。1件の商談で取引のかたまりごと動く。</dd></div>
+            <div><dt>入り口</dt><dd>地域の金融機関・商工団体・ITベンダーとの共催セミナー、および個別の業務ヒアリング</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 08 ビジネスモデル -->
+    <section class="slide" aria-roledescription="スライド" aria-label="8枚目 ビジネスモデル">
+      <header class="s-head"><span class="s-no">07</span><p class="s-kicker">ビジネスモデル</p></header>
+      <h2 class="s-title">料金は発注元だけ。工場は無料。</h2>
+      <div class="plans">
+        <article class="plan">
+          <h3>スタンダード</h3>
+          <p class="plan__price">30,000<small>円／月</small></p>
+          <ul><li>協力工場 30社まで</li><li>FAX送受信 月300枚まで</li><li>利用者 5名まで</li></ul>
+        </article>
+        <article class="plan plan--main">
+          <p class="plan__badge">想定の中心</p>
+          <h3>ビジネス</h3>
+          <p class="plan__price">60,000<small>円／月</small></p>
+          <ul><li>協力工場 100社まで</li><li>FAX送受信 月1,000枚まで</li><li>利用者 20名まで・権限設定</li></ul>
+        </article>
+        <article class="plan">
+          <h3>初期導入支援</h3>
+          <p class="plan__price">200,000<small>円〜</small></p>
+          <ul><li>取引先マスタの移行</li><li>協力工場への案内文・説明会</li><li>運用ルールの設計</li></ul>
+        </article>
+      </div>
+      <p class="s-foot">※価格はすべて税別の想定値です。PoCの結果を踏まえて見直します。</p>
+    </section>
+
+    <!-- 09 試算 -->
+    <section class="slide" aria-roledescription="スライド" aria-label="9枚目 収益の試算">
+      <header class="s-head"><span class="s-no">08</span><p class="s-kicker">収益の試算</p></header>
+      <h2 class="s-title">3年目の売上は、前提を積み上げて約0.5億円。</h2>
+      <div class="cols-2 cols-2--chart">
+        <div class="chart">
+          <svg viewBox="0 0 560 360" role="img" aria-labelledby="ch-t">
+            <title id="ch-t">年間の継続売上の試算。1年目約0.04億円、2年目約0.19億円、3年目約0.49億円</title>
+            <g stroke="#d8d3c4" stroke-width="1"><path d="M60 300H540M60 230H540M60 160H540M60 90H540"/></g>
+            <g font-family="SF Mono, Menlo, monospace" font-size="13" fill="#545a66" text-anchor="end"><text x="50" y="304">0</text><text x="50" y="234">0.2</text><text x="50" y="164">0.4</text><text x="50" y="94">0.6</text></g>
+            <text x="60" y="60" font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-size="13" fill="#545a66">億円／年</text>
+            <rect x="110" y="286" width="90" height="14" fill="#d8d3c4"/>
+            <rect x="255" y="234" width="90" height="66" fill="#e9b75a"/>
+            <rect x="400" y="129" width="90" height="171" fill="#f5a524"/>
+            <g font-family="SF Mono, Menlo, monospace" font-size="18" font-weight="700" fill="#16181d" text-anchor="middle"><text x="155" y="276">0.04</text><text x="300" y="224">0.19</text><text x="445" y="119">0.49</text></g>
+            <g font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-size="15" font-weight="700" fill="#16181d" text-anchor="middle"><text x="155" y="328">1年目</text><text x="300" y="328">2年目</text><text x="445" y="328">3年目</text></g>
+          </svg>
+        </div>
+        <table class="assume">
+          <caption>試算の前提（期末時点）</caption>
+          <thead><tr><th scope="col"></th><th scope="col">1年目</th><th scope="col">2年目</th><th scope="col">3年目</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">有料の発注元</th><td>8社</td><td>35社</td><td>90社</td></tr>
+            <tr><th scope="row">平均月額</th><td>4.0万円</td><td>4.5万円</td><td>4.5万円</td></tr>
+            <tr><th scope="row">継続売上（年換算）</th><td>384万円</td><td>1,890万円</td><td>4,860万円</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="s-foot">※すべて当チームの仮定に基づく試算で、実績ではありません。初期導入支援の売上は含めていません。年換算＝期末の有料社数×平均月額×12。</p>
+    </section>
+
+    <!-- 10 ポジション -->
+    <section class="slide" aria-roledescription="スライド" aria-label="10枚目 位置づけ">
+      <header class="s-head"><span class="s-no">09</span><p class="s-kicker">位置づけ</p></header>
+      <h2 class="s-title">「受注側の負担ゼロ」で、空いている場所に立つ。</h2>
+      <div class="cols-2 cols-2--wide">
+        <div class="matrix">
+          <svg viewBox="0 0 520 400" role="img" aria-labelledby="mx-t">
+            <title id="mx-t">縦軸を製造業への特化度、横軸を受注側の導入負担の小ささとした4象限図。汎用の受発注サービスは特化度が低く負担が中程度、業界EDIは特化度が高いが負担が大きい、FAXと電話は負担が小さいが記録が残らない。ハッチュウボードは特化度が高く負担も小さい右上に位置する</title>
+            <rect x="60" y="20" width="440" height="330" fill="#ffffff" stroke="#d8d3c4"/>
+            <rect x="280" y="20" width="220" height="165" fill="#fff6e3"/>
+            <path d="M280 20V350M60 185H500" stroke="#d8d3c4" stroke-width="2"/>
+            <g font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-size="13" fill="#545a66">
+              <text x="280" y="388" text-anchor="middle">受注側の導入負担が小さい →</text>
+              <text x="24" y="185" text-anchor="middle" transform="rotate(-90 24 185)">製造業への特化度 →</text>
+            </g>
+            <g font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-size="15" font-weight="700">
+              <circle cx="140" cy="80" r="10" fill="#7d8594"/><text x="158" y="86" fill="#16181d">業界EDI</text>
+              <circle cx="230" cy="260" r="10" fill="#7d8594"/><text x="248" y="266" fill="#16181d">汎用の受発注サービス</text>
+              <circle cx="440" cy="310" r="10" fill="#7d8594"/><text x="424" y="316" fill="#16181d" text-anchor="end">FAX・電話</text>
+              <circle cx="420" cy="70" r="16" fill="#f5a524"/><text x="420" y="118" fill="#16181d" text-anchor="middle">ハッチュウボード</text>
+            </g>
+          </svg>
+        </div>
+        <ul class="pain pain--plain">
+          <li><b>業界EDI</b><span>精度は高いが、受注側にも専用の環境が必要で、小さな工場ほど参加が難しい</span></li>
+          <li><b>汎用の受発注サービス</b><span>受注側にもアカウント登録とWeb操作が必要。図面の版管理など製造業の事情は薄い</span></li>
+          <li><b>FAX・電話</b><span>誰でも使えるが、データにならず記録も残らない</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 11 ロードマップ -->
+    <section class="slide" aria-roledescription="スライド" aria-label="11枚目 ロードマップ">
+      <header class="s-head"><span class="s-no">10</span><p class="s-kicker">ロードマップと判断基準</p></header>
+      <h2 class="s-title">半年ごとに、続けるかを数字で決める。</h2>
+      <ol class="road">
+        <li>
+          <p class="road__when">0〜6か月</p>
+          <h3>PoC：1つの取引のかたまり</h3>
+          <p>発注元1社と協力工場10社で、注文の送受信と FAX 読み取りを検証。</p>
+          <p class="road__kpi"><span>判断基準</span>注文の7割以上がハッチュウボード経由になる</p>
+        </li>
+        <li>
+          <p class="road__when">7〜12か月</p>
+          <h3>有料化と同地域への展開</h3>
+          <p>PoC先の有料移行と、同じ地域の発注元への紹介営業。</p>
+          <p class="road__kpi"><span>判断基準</span>有料の発注元 8社・解約 0社</p>
+        </li>
+        <li>
+          <p class="road__when">2年目</p>
+          <h3>協業先経由の販売</h3>
+          <p>地域の金融機関・ITベンダーと販売協力の枠組みをつくる。</p>
+          <p class="road__kpi"><span>判断基準</span>新規の半数が協業先経由</p>
+        </li>
+        <li>
+          <p class="road__when">3年目</p>
+          <h3>見積り・請求への拡張</h3>
+          <p>受発注の前後へ機能を広げ、1社あたりの単価を上げる。</p>
+          <p class="road__kpi"><span>判断基準</span>平均月額 4.5万円以上</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 12 お願い -->
+    <section class="slide s-dark s-end" aria-roledescription="スライド" aria-label="12枚目 次のステップ">
+      <header class="s-head"><span class="s-no">11</span><p class="s-kicker">次のステップ</p></header>
+      <h2 class="s-title s-title--xl">PoCにご協力いただける<br><span class="hl">発注元を1社</span>探しています。</h2>
+      <div class="ask">
+        <div><b>期間</b><span>6か月（利用料は無償）</span></div>
+        <div><b>お願いしたいこと</b><span>月1回の振り返り面談と、協力工場へのご案内</span></div>
+        <div><b>ご連絡先</b><span>hacchu@example.com ／ 000-0000-0000</span></div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<nav class="ctrl" aria-label="スライド操作">
+  <button type="button" class="ctrl__btn" id="prev" aria-label="前のスライド">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <p class="ctrl__count" aria-live="polite"><span id="cur">1</span> / <span id="total">12</span></p>
+  <button type="button" class="ctrl__btn" id="next" aria-label="次のスライド">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+  <p class="ctrl__hint">← → キーで移動</p>
+</nav>
+<div class="progress" aria-hidden="true"><span id="bar"></span></div>
+
+<script src="deck.js"></script>
+</body>
+</html>

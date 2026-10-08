@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ｜株式会社みなせ精工</title>
+<meta name="description" content="精密部品加工のお見積り、技術的なご相談、工場見学のお申し込みはこちらから。図面ファイルを添付してお問い合わせいただけます。">
+<meta name="theme-color" content="#10213a">
+<link rel="stylesheet" href="wp-theme/villion-corporate/style.css">
+<script src="wp-theme/villion-corporate/assets/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+<header class="site-header">
+  <div class="container site-header__in">
+    <a class="site-logo" href="index.html">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2l16 9v18l-16 9-16-9V11z" fill="#10213a"/><circle cx="20" cy="20" r="7" fill="none" stroke="#d6451b" stroke-width="3"/><path d="M20 2v6M36 11l-5 3M36 29l-5-3M20 38v-6M4 29l5-3M4 11l5 3" stroke="#f5f5f1" stroke-width="1.5"/></svg>
+      <span><span class="site-logo__ja">みなせ精工</span><span class="site-logo__en">MINASE SEIKO CO., LTD.</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav"><span></span><span></span><span></span><span class="screen-reader-text">メニューを開く</span></button>
+    <nav id="global-nav" class="global-nav" aria-label="グローバルナビゲーション">
+      <ul>
+        <li><a href="index.html" data-en="TOP">トップ</a></li>
+        <li><a href="business.html" data-en="BUSINESS">事業紹介</a></li>
+        <li><a href="company.html" data-en="COMPANY">会社概要</a></li>
+        <li class="nav-cta"><a href="contact.html" aria-current="page">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-hero">
+  <div class="container page-hero__in">
+    <nav class="breadcrumb" aria-label="パンくずリスト"><a href="index.html">トップ</a> ／ お問い合わせ</nav>
+    <p class="eyebrow">CONTACT</p>
+    <h1>お問い合わせ</h1>
+    <p>お見積り・技術的なご相談・工場見学のお申し込みを受け付けています。2営業日以内に担当者からご連絡します。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container contact-grid">
+    <aside class="contact-side" aria-label="お電話・メールでのお問い合わせ">
+      <div class="contact-card">
+        <h2>お電話</h2>
+        <a class="tel" href="tel:000-0000-0000">000-0000-0000</a>
+        <p>平日 8:30〜17:30（土日祝休み）</p>
+      </div>
+      <div class="contact-card">
+        <h2>メール</h2>
+        <p style="margin-top:4px"><a href="mailto:info@example.com">info@example.com</a></p>
+        <p>図面ファイルの添付は、合計10MBまで受け取れます。</p>
+      </div>
+      <div class="contact-card">
+        <h2>図面の秘密保持について</h2>
+        <p>お預かりした図面・データは見積りと加工の目的にのみ使用します。秘密保持契約の締結にも対応します。</p>
+      </div>
+    </aside>
+
+    <form class="form js-contact" action="#" method="post">
+      <div class="form-row form-row--wide">
+        <fieldset>
+          <legend>お問い合わせ種別<span class="badge">必須</span></legend>
+          <div class="radio-row">
+            <label><input type="radio" name="kind" value="estimate" checked>お見積り</label>
+            <label><input type="radio" name="kind" value="tech">技術的なご相談</label>
+            <label><input type="radio" name="kind" value="visit">工場見学</label>
+            <label><input type="radio" name="kind" value="other">その他</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-row"><label for="c-company">会社名<span class="badge">必須</span></label><input id="c-company" type="text" name="company" autocomplete="organization" required></div>
+      <div class="form-row"><label for="c-dept">部署名<span class="badge badge--opt">任意</span></label><input id="c-dept" type="text" name="department"></div>
+      <div class="form-row"><label for="c-name">お名前<span class="badge">必須</span></label><input id="c-name" type="text" name="name" autocomplete="name" required></div>
+      <div class="form-row"><label for="c-tel">電話番号<span class="badge">必須</span></label><input id="c-tel" type="tel" name="tel" autocomplete="tel" placeholder="000-0000-0000" required></div>
+      <div class="form-row form-row--wide"><label for="c-mail">メールアドレス<span class="badge">必須</span></label><input id="c-mail" type="email" name="email" autocomplete="email" placeholder="name@example.com" required></div>
+      <div class="form-row"><label for="c-qty">数量<span class="badge badge--opt">任意</span></label>
+        <select id="c-qty" name="qty"><option>1〜10個</option><option>11〜100個</option><option>101〜1,000個</option><option>1,001個以上</option><option>未定</option></select>
+      </div>
+      <div class="form-row"><label for="c-due">希望納期<span class="badge badge--opt">任意</span></label><input id="c-due" type="text" name="due" placeholder="例）11月末"></div>
+      <div class="form-row form-row--wide"><label for="c-file">図面・データ<span class="badge badge--opt">任意</span></label><input id="c-file" type="file" name="drawing" accept=".pdf,.dxf,.step,.stp,.igs,.iges" aria-describedby="c-file-hint"><span class="hint" id="c-file-hint">PDF / DXF / STEP / IGES、合計10MBまで</span></div>
+      <div class="form-row form-row--wide"><label for="c-msg">お問い合わせ内容<span class="badge">必須</span></label><textarea id="c-msg" name="message" required placeholder="材質・表面処理・用途など、分かる範囲でご記入ください"></textarea></div>
+      <label class="agree"><input type="checkbox" name="agree" required><span>入力した情報を、お問い合わせへの回答のために利用することに同意します。</span></label>
+      <button class="btn btn--primary" type="submit">送信内容を確認して送る</button>
+      <p class="form-done" role="status" aria-live="polite" tabindex="-1">お問い合わせを受け付けました。2営業日以内に担当者からご連絡します。</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__in">
+    <div>
+      <a class="site-logo" href="index.html">
+        <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2l16 9v18l-16 9-16-9V11z" fill="#ffffff"/><circle cx="20" cy="20" r="7" fill="none" stroke="#d6451b" stroke-width="3"/><path d="M20 2v6M36 11l-5 3M36 29l-5-3M20 38v-6M4 29l5-3M4 11l5 3" stroke="#0b1729" stroke-width="1.5"/></svg>
+        <span><span class="site-logo__ja">株式会社みなせ精工</span><span class="site-logo__en">MINASE SEIKO CO., LTD.</span></span>
+      </a>
+      <address>〒000-0000 長野県上田市 みなせ台工業団地 3-12<br>TEL 000-0000-0000 ／ FAX 000-0000-0001<br>info@example.com</address>
+    </div>
+    <nav class="footer-nav" aria-label="フッターナビゲーション">
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="business.html">事業紹介</a></li>
+        <li><a href="company.html">会社概要</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container site-footer__copy">&copy; 2026 MINASE SEIKO CO., LTD.</div>
+</footer>
+</body>
+</html>
