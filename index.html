@@ -4,225 +4,473 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>制作例｜株式会社VILLION</title>
-<meta name="description" content="株式会社VILLIONの制作例。集客LP、採用LP、WordPressオリジナルテーマのコーポレートサイト、HTMLスライドの事業提案資料。いずれも素のHTML/CSSで、スマホとPCの両方に対応しています。">
-<meta name="theme-color" content="#111111">
-<style>
-:root {
-  --ink: #111111;
-  --sub: #5a5a5a;
-  --line: #e2e0db;
-  --bg: #fafaf8;
-  --white: #ffffff;
-  --accent: #2346d8;
-  --sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
-  --mono: "SF Mono", Menlo, Consolas, monospace;
-}
-*, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
-body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.8; font-size: 16px; }
-h1, h2, h3, p, ul, dl, dd { margin: 0; }
-a { color: inherit; }
-:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
-.wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
-
-.hd { border-bottom: 1px solid var(--line); }
-.hd__in { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.logo { font-weight: 900; letter-spacing: .24em; font-size: 18px; text-decoration: none; display: flex; align-items: center; gap: 10px; }
-.logo svg { width: 26px; height: 26px; }
-.hd__meta { font-size: 12px; color: var(--sub); font-family: var(--mono); letter-spacing: .08em; }
-
-.intro { padding: 56px 0 40px; display: grid; gap: 24px; }
-.intro__label { font-family: var(--mono); font-size: 12px; letter-spacing: .2em; color: var(--accent); }
-.intro h1 { font-size: clamp(30px, 7vw, 56px); font-weight: 800; line-height: 1.35; letter-spacing: .01em; }
-.intro p { color: var(--sub); max-width: 38em; }
-.intro__stack { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; list-style: none; }
-.intro__stack li { font-family: var(--mono); font-size: 12px; border: 1px solid var(--line); background: var(--white); padding: 3px 10px; border-radius: 999px; }
-@media (min-width: 960px) {
-  .intro { grid-template-columns: 1.2fr 1fr; align-items: end; padding: 96px 0 64px; gap: 64px; }
-}
-
-.works { display: grid; gap: 28px; padding-bottom: 80px; counter-reset: w; }
-.work { background: var(--white); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; display: grid; }
-.work__thumb { display: block; aspect-ratio: 16 / 10; overflow: hidden; border-bottom: 1px solid var(--line); background: #eee; }
-.work__thumb svg { width: 100%; height: 100%; transition: transform .4s ease; }
-.work:hover .work__thumb svg { transform: scale(1.025); }
-.work__body { padding: 22px 20px 24px; display: grid; gap: 14px; align-content: start; }
-.work__top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.work__no { font-family: var(--mono); font-size: 13px; color: var(--sub); }
-.work__no::before { counter-increment: w; content: counter(w, decimal-leading-zero) " / "; color: var(--ink); font-weight: 700; }
-.work__kind { font-size: 12px; font-weight: 700; padding: 2px 10px; border-radius: 3px; background: var(--ink); color: #fff; }
-.work h2 { font-size: 21px; font-weight: 800; line-height: 1.45; }
-.work__tech { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; list-style: none; }
-.work__tech li { font-family: var(--mono); font-size: 12px; color: var(--sub); background: var(--bg); border: 1px solid var(--line); padding: 1px 8px; border-radius: 3px; }
-.work__points { list-style: none; padding: 0; display: grid; gap: 6px; border-top: 1px dashed var(--line); padding-top: 14px; }
-.work__points li { position: relative; padding-left: 20px; font-size: 15px; line-height: 1.7; }
-.work__points li::before { content: ""; position: absolute; left: 0; top: .72em; width: 10px; height: 2px; background: var(--accent); }
-.work__links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
-.work__link { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; text-decoration: none; padding: 10px 16px; border: 1.5px solid var(--ink); border-radius: 4px; }
-.work__link:hover { background: var(--ink); color: #fff; }
-.work__link--sub { border-color: var(--line); font-weight: 600; font-size: 14px; }
-.work__link--sub:hover { background: var(--bg); color: var(--ink); }
-.work__link span[aria-hidden] { font-family: var(--mono); }
-@media (min-width: 760px) { .works { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1100px) {
-  .work--wide { grid-column: 1 / -1; grid-template-columns: 1.25fr 1fr; }
-  .work--wide .work__thumb { aspect-ratio: auto; border-bottom: 0; border-right: 1px solid var(--line); min-height: 100%; }
-  .work--wide .work__body { padding: 36px 36px; }
-}
-
-.ft { border-top: 1px solid var(--line); padding: 32px 0 40px; font-size: 13px; color: var(--sub); }
-.ft__in { display: grid; gap: 8px; }
-.ft b { color: var(--ink); letter-spacing: .2em; }
-</style>
+<meta name="description" content="株式会社VILLIONの制作例。集客LP、採用LP、WordPressテーマ付きのコーポレートサイト、HTMLスライドの事業提案資料。業種ごとに伝え方から設計し、図版もすべてSVGとCSSで描いています。">
+<meta property="og:title" content="制作例｜株式会社VILLION">
+<meta property="og:description" content="業種ごとに、伝え方から設計したWebサイト。株式会社VILLIONの制作例です。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="株式会社VILLION">
+<meta property="og:locale" content="ja_JP">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<script>(function(h){h.className+=' js';try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)h.className+=' motion';}catch(e){}setTimeout(function(){if(!window.VW)h.classList.remove('motion');},2500);})(document.documentElement);</script>
+<link rel="stylesheet" href="assets/css/works.css">
+<script src="assets/js/works.js" defer></script>
 </head>
 <body>
+<a class="skip" href="#main">本文へ移動</a>
+
+<!-- 何度も使う図版（ロゴ・各サイトの画面）をここで一度だけ定義 -->
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="pv-sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b4fa3"/><stop offset="1" stop-color="#083a78"/></linearGradient>
+    <pattern id="pv-gr" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#2c4466" stroke-width="1"/></pattern>
+    <pattern id="pv-gr2" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#24272f" stroke-width="1"/></pattern>
+  </defs>
+  <symbol id="vl-logo" viewBox="-55.2 -771.8 4810.0 838.5"><path fill="#c8102e" transform="translate(0.0 0) scale(1 -1)" d="M310.2412109375 0 2.60302734375 705H91.768798828125L365.4447021484375 65.8165283203125H334.0477294921875L608.783935546875 705H695.0703125L385.8416748046875 0Z"/><path fill="#c8102e" transform="translate(858.0 0) scale(1 -1)" d="M88.0728759765625 0V705H170.94970703125V0Z"/><path fill="currentColor" transform="translate(1277.0 0) scale(1 -1)" d="M88.0728759765625 0V705H170.94970703125V71.889404296875H527.336669921875V0Z"/><path fill="currentColor" transform="translate(1982.0 0) scale(1 -1)" d="M88.0728759765625 0V705H170.94970703125V71.889404296875H527.336669921875V0Z"/><path fill="currentColor" transform="translate(2687.0 0) scale(1 -1)" d="M88.0728759765625 0V705H170.94970703125V0Z"/><path fill="currentColor" transform="translate(3106.0 0) scale(1 -1)" d="M61.8919677734375 353Q61.8919677734375 464.5301513671875 100.2713623046875 545.2650756835938Q138.6507568359375 626 211.20477294921875 669.9698486328125Q283.7587890625 713.939697265625 385.577880859375 713.939697265625Q485.336669921875 713.939697265625 558.15576171875 669.9698486328125Q630.974853515625 626 670.6193237304688 545.2650756835938Q710.2637939453125 464.5301513671875 710.2637939453125 354Q710.2637939453125 242.4698486328125 670.354248046875 161.23492431640625Q630.4447021484375 80 557.6256103515625 35.5301513671875Q484.8065185546875 -8.939697265625 385.577880859375 -8.939697265625Q284.2889404296875 -8.939697265625 211.9698486328125 35.5301513671875Q139.6507568359375 80 100.7713623046875 161.23492431640625Q61.8919677734375 242.4698486328125 61.8919677734375 353ZM149.1783447265625 353Q149.1783447265625 217.03515625 209.19091796875 140.75750732421875Q269.2034912109375 64.4798583984375 385.577880859375 64.4798583984375Q497.8919677734375 64.4798583984375 560.4346923828125 140.492431640625Q622.9774169921875 216.5050048828125 622.9774169921875 353Q622.9774169921875 489.96484375 560.9346923828125 565.2424926757812Q498.8919677734375 640.5201416015625 385.577880859375 640.5201416015625Q269.2034912109375 640.5201416015625 209.19091796875 565.2424926757812Q149.1783447265625 489.96484375 149.1783447265625 353Z"/><path fill="currentColor" transform="translate(4038.0 0) scale(1 -1)" d="M88.0728759765625 0V705H152.733642578125L605.2060546875 104.959716796875H581.8568115234375V705H658.91455078125V0H594.783935546875L142.7813720703125 600.040283203125H165.130615234375V0Z"/></symbol>
+
+  <!-- 01 集客LP：PC -->
+  <symbol id="pv-suido" viewBox="0 0 640 400">
+    <rect width="640" height="400" fill="#0b4fa3"/>
+    <rect width="640" height="40" fill="#fff"/><rect x="24" y="12" width="16" height="16" rx="4" fill="#0b4fa3"/><rect x="48" y="14" width="90" height="12" rx="3" fill="#1a2230"/><rect x="510" y="12" width="106" height="16" rx="3" fill="#0b4fa3"/>
+    <rect x="40" y="76" width="44" height="14" rx="2" fill="none" stroke="#fff" opacity=".7"/><rect x="90" y="76" width="44" height="14" rx="2" fill="none" stroke="#fff" opacity=".7"/>
+    <rect x="40" y="106" width="250" height="28" rx="3" fill="#fff"/><rect x="40" y="142" width="200" height="28" rx="3" fill="#ffd23f"/><rect x="40" y="178" width="170" height="28" rx="3" fill="#fff"/>
+    <rect x="40" y="226" width="80" height="54" rx="8" fill="#fff"/><rect x="128" y="226" width="80" height="54" rx="8" fill="#fff"/><rect x="216" y="226" width="80" height="54" rx="8" fill="#fff"/>
+    <rect x="40" y="298" width="150" height="40" rx="20" fill="#ffd23f"/><rect x="200" y="298" width="150" height="40" rx="20" fill="#00853c"/>
+    <circle cx="480" cy="200" r="120" fill="#3d7fd1" opacity=".55"/><path d="M480 130c-26 36-46 58-46 86a46 46 0 0 0 92 0c0-28-20-50-46-86Z" fill="#fff"/>
+    <path d="M-20 400 Q320 330 660 400Z" fill="#fff"/>
+  </symbol>
+
+  <!-- 01 集客LP：スマホ -->
+  <symbol id="pv-suido-m" viewBox="0 0 375 812">
+    <rect width="375" height="812" fill="#fff"/>
+    <rect x="16" y="13" width="38" height="38" rx="10" fill="#0b4fa3"/><path d="M35 20c-5 7-9 11.5-9 17a9 9 0 0 0 18 0c0-5.5-4-10-9-17Z" fill="#fff"/>
+    <rect x="62" y="20" width="104" height="12" rx="3" fill="#1a2230"/><rect x="62" y="38" width="78" height="7" rx="3" fill="#8a96a8"/>
+    <rect x="252" y="22" width="108" height="20" rx="10" fill="#ffd23f"/>
+    <rect y="64" width="375" height="600" fill="url(#pv-sg)"/>
+    <g fill="none" stroke="#fff" stroke-opacity=".6"><rect x="16" y="92" width="44" height="18" rx="3"/><rect x="66" y="92" width="58" height="18" rx="3"/><rect x="130" y="92" width="36" height="18" rx="3"/><rect x="172" y="92" width="48" height="18" rx="3"/></g>
+    <g font-family="Hiragino Sans, 'Noto Sans JP', sans-serif" font-weight="900" font-size="31"><text x="16" y="164" fill="#fff">水のトラブル、</text><text x="16" y="206" fill="#ffd23f">見積りを見てから</text><text x="16" y="248" fill="#fff">決められます。</text></g>
+    <g fill="#fff" opacity=".75"><rect x="16" y="274" width="330" height="8" rx="4"/><rect x="16" y="292" width="300" height="8" rx="4"/><rect x="16" y="310" width="200" height="8" rx="4"/></g>
+    <g fill="#fff"><rect x="16" y="340" width="107" height="66" rx="10"/><rect x="134" y="340" width="107" height="66" rx="10"/><rect x="252" y="340" width="107" height="66" rx="10"/></g>
+    <g font-family="Hiragino Sans, 'Noto Sans JP', sans-serif" font-weight="900" font-size="22" fill="#0b4fa3" text-anchor="middle"><text x="69" y="374">0円</text><text x="187" y="374">8-22</text><text x="305" y="374">事前</text></g>
+    <g fill="#c4cedd"><rect x="40" y="386" width="58" height="7" rx="3"/><rect x="158" y="386" width="58" height="7" rx="3"/><rect x="276" y="386" width="58" height="7" rx="3"/></g>
+    <rect x="16" y="426" width="343" height="58" rx="29" fill="#ffd23f"/><text x="187" y="463" font-family="Hiragino Sans, 'Noto Sans JP', sans-serif" font-weight="900" font-size="20" fill="#1a2230" text-anchor="middle">000-0000-0000</text>
+    <rect x="16" y="496" width="343" height="56" rx="28" fill="#00853c"/><rect x="132" y="518" width="112" height="12" rx="6" fill="#fff"/>
+    <path d="M-30 664 Q187 600 405 664Z" fill="#fff"/>
+    <text x="187" y="690" font-family="Hiragino Sans, 'Noto Sans JP', sans-serif" font-weight="800" font-size="11" letter-spacing="2" fill="#0b4fa3" text-anchor="middle">TROUBLE</text>
+    <text x="187" y="718" font-family="Hiragino Sans, 'Noto Sans JP', sans-serif" font-weight="900" font-size="21" fill="#1a2230" text-anchor="middle">こんなとき、ご相談ください</text>
+    <rect x="0" y="742" width="375" height="70" fill="#fff"/><rect x="0" y="742" width="375" height="1" fill="#d9e0ea"/>
+    <rect x="8" y="750" width="142" height="54" rx="8" fill="#ffd23f"/><rect x="156" y="750" width="102" height="54" rx="8" fill="#00853c"/><rect x="264" y="750" width="103" height="54" rx="8" fill="#0b4fa3"/>
+  </symbol>
+
+  <!-- 02 採用LP -->
+  <symbol id="pv-recruit" viewBox="0 0 640 400">
+    <rect width="640" height="400" fill="#fbf6ee"/>
+    <path d="M420 40c110 0 200 70 200 170s-80 180-200 180-190-70-180-180S310 40 420 40Z" fill="#e4ece2"/>
+    <path d="M400 210l60-46 60 46v86H400z" fill="#fff"/><rect x="448" y="240" width="26" height="56" fill="#c46a4a"/>
+    <circle cx="330" cy="200" r="24" fill="#efe3cf"/><path d="M296 300c0-50 16-80 34-80s34 30 34 80z" fill="#5d7a62"/>
+    <rect x="40" y="56" width="110" height="10" rx="5" fill="#a2533a"/>
+    <rect x="40" y="86" width="230" height="30" fill="#efe3cf"/><rect x="40" y="86" width="220" height="24" rx="3" fill="#2b2a27"/>
+    <rect x="40" y="128" width="230" height="30" fill="#efe3cf"/><rect x="40" y="128" width="200" height="24" rx="3" fill="#2b2a27"/>
+    <rect x="40" y="180" width="200" height="8" rx="4" fill="#8a857b"/><rect x="40" y="196" width="180" height="8" rx="4" fill="#8a857b"/><rect x="40" y="212" width="160" height="8" rx="4" fill="#8a857b"/>
+    <rect x="40" y="244" width="70" height="20" rx="10" fill="#fff" stroke="#e3d9c8"/><rect x="116" y="244" width="70" height="20" rx="10" fill="#fff" stroke="#e3d9c8"/><rect x="192" y="244" width="70" height="20" rx="10" fill="#fff" stroke="#e3d9c8"/>
+    <rect x="0" y="320" width="640" height="80" fill="#3f5a45"/>
+    <rect x="40" y="342" width="140" height="36" rx="10" fill="#fff"/><rect x="196" y="342" width="90" height="36" rx="10" fill="none" stroke="#7d9a82"/><rect x="300" y="342" width="90" height="36" rx="10" fill="none" stroke="#7d9a82"/>
+  </symbol>
+
+  <!-- 03 コーポレート：トップ -->
+  <symbol id="pv-corp" viewBox="0 0 640 400">
+    <rect width="640" height="400" fill="#10213a"/><rect width="640" height="400" fill="url(#pv-gr)" opacity=".6"/>
+    <rect width="640" height="40" fill="#f5f5f1"/><path d="M34 10l8 4.5v9L34 28l-8-4.5v-9z" fill="#10213a"/><rect x="50" y="14" width="70" height="12" rx="2" fill="#10213a"/>
+    <rect x="400" y="14" width="40" height="10" rx="2" fill="#4d5866"/><rect x="452" y="14" width="40" height="10" rx="2" fill="#4d5866"/><rect x="510" y="10" width="100" height="20" rx="2" fill="#b23610"/>
+    <rect x="36" y="80" width="120" height="8" rx="2" fill="#ff9d7c"/>
+    <rect x="36" y="104" width="250" height="26" rx="2" fill="#fff"/><rect x="36" y="140" width="210" height="26" rx="2" fill="#fff"/>
+    <rect x="36" y="186" width="240" height="7" rx="3" fill="#8b9bb3"/><rect x="36" y="200" width="220" height="7" rx="3" fill="#8b9bb3"/>
+    <rect x="36" y="228" width="130" height="36" rx="2" fill="#b23610"/><rect x="176" y="228" width="110" height="36" rx="2" fill="none" stroke="#fff"/>
+    <g fill="none" stroke="#c9d4e3" stroke-width="1.5"><rect x="340" y="90" width="90" height="110"/><circle cx="530" cy="145" r="60"/><circle cx="530" cy="145" r="24" stroke="#ff9d7c"/></g>
+    <g stroke="#2c4466"><rect x="320" y="240" width="300" height="60" fill="none"/><path d="M420 240v60M520 240v60"/></g>
+    <rect x="336" y="256" width="40" height="6" fill="#8b9bb3"/><rect x="336" y="270" width="60" height="16" fill="#fff"/><rect x="436" y="256" width="40" height="6" fill="#8b9bb3"/><rect x="436" y="270" width="40" height="16" fill="#fff"/><rect x="536" y="256" width="40" height="6" fill="#8b9bb3"/><rect x="536" y="270" width="50" height="16" fill="#fff"/>
+    <rect x="0" y="330" width="640" height="70" fill="#f5f5f1"/><g fill="#fff" stroke="#d4d9e0"><rect x="36" y="344" width="180" height="56"/><rect x="230" y="344" width="180" height="56"/><rect x="424" y="344" width="180" height="56"/></g>
+  </symbol>
+
+  <!-- 03 コーポレート：下層ページの共通ヘッダー -->
+  <symbol id="pv-corp-head" viewBox="0 0 640 400">
+    <rect width="640" height="400" fill="#f5f5f1"/>
+    <rect width="640" height="40" fill="#f5f5f1"/><rect y="40" width="640" height="1" fill="#d4d9e0"/><path d="M34 10l8 4.5v9L34 28l-8-4.5v-9z" fill="#10213a"/><rect x="50" y="14" width="70" height="12" rx="2" fill="#10213a"/>
+    <rect x="400" y="14" width="40" height="10" rx="2" fill="#4d5866"/><rect x="452" y="14" width="40" height="10" rx="2" fill="#4d5866"/><rect x="510" y="10" width="100" height="20" rx="2" fill="#b23610"/>
+    <rect y="41" width="640" height="104" fill="#10213a"/><rect y="41" width="640" height="104" fill="url(#pv-gr)" opacity=".45"/>
+    <rect x="36" y="60" width="80" height="6" rx="2" fill="#9fb0c8"/><rect x="36" y="78" width="70" height="7" rx="2" fill="#ff9d7c"/><rect x="36" y="94" width="150" height="20" rx="2" fill="#fff"/><rect x="36" y="124" width="280" height="6" rx="3" fill="#8b9bb3"/>
+  </symbol>
+  <symbol id="pv-corp-biz" viewBox="0 0 640 400">
+    <use href="#pv-corp-head"/>
+    <rect x="36" y="172" width="260" height="162" fill="#fff" stroke="#d4d9e0"/>
+    <rect x="76" y="290" width="180" height="16" fill="#10213a"/><rect x="132" y="196" width="68" height="54" fill="#5b6b80"/><rect x="156" y="250" width="20" height="20" fill="#8796aa"/><path d="M166 270v10" stroke="#d6451b" stroke-width="6"/><rect x="116" y="280" width="100" height="10" fill="#d6451b"/>
+    <rect x="330" y="186" width="90" height="7" rx="2" fill="#b23610"/><rect x="330" y="202" width="150" height="18" rx="2" fill="#141a22"/>
+    <g fill="#9aa5b4"><rect x="330" y="232" width="260" height="6" rx="3"/><rect x="330" y="246" width="240" height="6" rx="3"/><rect x="330" y="260" width="200" height="6" rx="3"/></g>
+    <g fill="#b23610"><rect x="330" y="284" width="8" height="8" rx="1"/><rect x="330" y="300" width="8" height="8" rx="1"/><rect x="330" y="316" width="8" height="8" rx="1"/></g>
+    <g fill="#4d5866"><rect x="346" y="285" width="190" height="6" rx="3"/><rect x="346" y="301" width="170" height="6" rx="3"/><rect x="346" y="317" width="200" height="6" rx="3"/></g>
+    <rect x="36" y="354" width="568" height="1" fill="#d4d9e0"/>
+    <rect x="344" y="372" width="260" height="28" fill="#fff" stroke="#d4d9e0"/>
+  </symbol>
+  <symbol id="pv-corp-co" viewBox="0 0 640 400">
+    <use href="#pv-corp-head"/>
+    <rect x="36" y="168" width="70" height="7" rx="2" fill="#b23610"/>
+    <rect x="36" y="186" width="4" height="58" fill="#b23610"/><rect x="50" y="190" width="200" height="18" rx="2" fill="#141a22"/><rect x="50" y="218" width="170" height="18" rx="2" fill="#141a22"/>
+    <g fill="#9aa5b4"><rect x="300" y="174" width="300" height="6" rx="3"/><rect x="300" y="188" width="290" height="6" rx="3"/><rect x="300" y="202" width="260" height="6" rx="3"/><rect x="300" y="222" width="300" height="6" rx="3"/><rect x="300" y="236" width="220" height="6" rx="3"/></g>
+    <rect x="0" y="266" width="640" height="134" fill="#fff"/>
+    <g stroke="#d4d9e0"><rect x="36" y="286" width="330" height="114" fill="#fff"/><path d="M36 314h330M36 342h330M36 370h330M110 286v114"/></g>
+    <rect x="36" y="286" width="74" height="114" fill="#fafaf7" stroke="#d4d9e0"/>
+    <g fill="#10213a"><rect x="48" y="296" width="40" height="7" rx="2"/><rect x="48" y="324" width="40" height="7" rx="2"/><rect x="48" y="352" width="40" height="7" rx="2"/><rect x="48" y="380" width="40" height="7" rx="2"/></g>
+    <g fill="#4d5866"><rect x="122" y="296" width="140" height="7" rx="2"/><rect x="122" y="324" width="90" height="7" rx="2"/><rect x="122" y="352" width="120" height="7" rx="2"/><rect x="122" y="380" width="160" height="7" rx="2"/></g>
+    <path d="M410 290V400" stroke="#d4d9e0" stroke-width="2"/>
+    <g fill="#fff" stroke="#b23610" stroke-width="2"><circle cx="410" cy="300" r="5"/><circle cx="410" cy="336" r="5"/><circle cx="410" cy="372" r="5"/></g>
+    <g fill="#10213a"><rect x="426" y="296" width="36" height="8" rx="2"/><rect x="426" y="332" width="36" height="8" rx="2"/><rect x="426" y="368" width="36" height="8" rx="2"/></g>
+    <g fill="#9aa5b4"><rect x="472" y="297" width="120" height="6" rx="3"/><rect x="472" y="333" width="100" height="6" rx="3"/><rect x="472" y="369" width="130" height="6" rx="3"/></g>
+  </symbol>
+  <symbol id="pv-corp-ct" viewBox="0 0 640 400">
+    <use href="#pv-corp-head"/>
+    <g fill="#fff" stroke="#d4d9e0"><rect x="36" y="168" width="176" height="62"/><rect x="36" y="240" width="176" height="62"/><rect x="36" y="312" width="176" height="62"/><rect x="230" y="168" width="374" height="232"/></g>
+    <rect x="50" y="180" width="50" height="6" rx="2" fill="#5b6b80"/><rect x="50" y="196" width="130" height="16" rx="2" fill="#10213a"/>
+    <rect x="50" y="252" width="50" height="6" rx="2" fill="#5b6b80"/><rect x="50" y="268" width="110" height="7" rx="2" fill="#10213a"/>
+    <rect x="50" y="324" width="90" height="6" rx="2" fill="#5b6b80"/><rect x="50" y="340" width="140" height="6" rx="3" fill="#9aa5b4"/>
+    <g fill="#141a22"><rect x="250" y="186" width="90" height="7" rx="2"/><rect x="250" y="232" width="50" height="7" rx="2"/><rect x="430" y="232" width="50" height="7" rx="2"/><rect x="250" y="290" width="60" height="7" rx="2"/></g>
+    <g fill="none" stroke="#b23610" stroke-width="1.5"><circle cx="256" cy="210" r="5"/><circle cx="326" cy="210" r="5"/><circle cx="406" cy="210" r="5"/></g><circle cx="256" cy="210" r="2.5" fill="#b23610"/>
+    <g fill="#fff" stroke="#b8c1cd"><rect x="250" y="244" width="166" height="28"/><rect x="430" y="244" width="160" height="28"/><rect x="250" y="302" width="340" height="50"/></g>
+    <rect x="250" y="364" width="150" height="26" rx="2" fill="#b23610"/>
+  </symbol>
+
+  <!-- 04 提案資料 -->
+  <symbol id="pv-deck" viewBox="0 0 640 400">
+    <rect width="640" height="400" fill="#0f1013"/>
+    <g transform="translate(70 60) rotate(-4 250 140)"><rect width="500" height="281" rx="4" fill="#f3f1ea"/><rect x="30" y="28" width="26" height="12" rx="2" fill="#f5a524"/><rect x="30" y="54" width="300" height="20" rx="2" fill="#16181d"/><g fill="#fff" stroke="#d8d3c4"><rect x="30" y="100" width="140" height="150" rx="8"/><rect x="180" y="100" width="140" height="150" rx="8"/><rect x="330" y="100" width="140" height="150" rx="8"/></g><rect x="180" y="100" width="140" height="150" rx="8" fill="#16181d"/><rect x="200" y="124" width="70" height="10" rx="2" fill="#f5a524"/><rect x="200" y="146" width="90" height="18" rx="2" fill="#f3f1ea"/></g>
+    <g transform="translate(40 40)"><rect width="500" height="281" rx="4" fill="#16181d" stroke="#2a2e37"/><rect x="34" y="40" width="80" height="10" rx="2" fill="#f5a524"/><rect x="34" y="70" width="330" height="34" rx="3" fill="#f3f1ea"/><rect x="34" y="114" width="250" height="34" rx="3" fill="#f5a524"/><rect x="34" y="176" width="260" height="10" rx="3" fill="#7d8594"/><rect x="34" y="236" width="24" height="24" rx="5" fill="#f5a524"/><rect x="66" y="243" width="120" height="10" rx="3" fill="#7d8594"/></g>
+    <rect x="250" y="356" width="140" height="4" rx="2" fill="#22252c"/><rect x="250" y="356" width="40" height="4" rx="2" fill="#f5a524"/>
+  </symbol>
+  <symbol id="pv-deck-cover" viewBox="0 0 1280 720">
+    <rect width="1280" height="720" fill="#16181d"/>
+    <rect x="560" width="720" height="720" fill="url(#pv-gr2)"/>
+    <g font-family="Hiragino Sans, 'Noto Sans JP', sans-serif">
+      <text x="80" y="230" font-family="SF Mono, Menlo, monospace" font-size="16" letter-spacing="1.6" fill="#f5a524">事業提案　2026.10</text>
+      <text x="80" y="330" font-size="76" font-weight="900" fill="#f3f1ea">町工場の受発注を、</text>
+      <text x="80" y="425" font-size="76" font-weight="900" fill="#f5a524">FAXのまま<tspan fill="#f3f1ea">デジタルに。</tspan></text>
+      <text x="80" y="492" font-size="22" fill="#c9c5ba">地方の中小製造業向け 受発注クラウド「ハッチュウボード」</text>
+      <text x="138" y="644" font-size="16" font-weight="700" fill="#c9c5ba">ハッチュウボード 事業準備チーム</text>
+    </g>
+    <rect x="80" y="616" width="44" height="44" rx="8" fill="#f5a524"/><rect x="88" y="626" width="26" height="5" rx="2" fill="#16181d"/><rect x="88" y="636" width="18" height="5" rx="2" fill="#16181d"/><rect x="88" y="646" width="22" height="5" rx="2" fill="#16181d"/>
+  </symbol>
+</svg>
+
 <header class="hd">
-  <div class="wrap hd__in">
-    <a class="logo" href="index.html">
-      <svg viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="4" fill="#111"/><path d="M6 7l7 13 7-13" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/></svg>
-      VILLION
-    </a>
-    <span class="hd__meta">WORKS</span>
+  <div class="hd__in">
+    <a class="logo" href="./" aria-label="株式会社VILLION 制作例 トップ"><svg viewBox="0 0 4810 838.5" aria-hidden="true" focusable="false"><use href="#vl-logo"/></svg><span class="logo__ja">Works</span></a>
+    <nav class="hd__nav" aria-label="制作例">
+      <a href="#w1"><span>01</span>集客LP</a>
+      <a href="#w2"><span>02</span>採用LP</a>
+      <a href="#w3"><span>03</span>コーポレート</a>
+      <a href="#w4"><span>04</span>提案資料</a>
+    </nav>
+    <a class="hd__company" href="https://villion.co.jp/" data-company data-magnetic>会社サイト<span aria-hidden="true">↗</span></a>
   </div>
 </header>
 
-<main>
-  <section class="intro wrap" aria-labelledby="intro-title">
-    <div>
-      <p class="intro__label">SELECTED WORKS</p>
-      <h1 id="intro-title" style="margin-top:12px">業種ごとに、<br>伝え方から設計した<br>4つの制作例。</h1>
+<main id="main">
+
+<!-- ===== ファーストビュー ===== -->
+<section class="hero" data-scene="hero" aria-labelledby="hero-title">
+  <div class="hero__sticky">
+    <div class="hero__grid" aria-hidden="true"><i class="gx"></i><i class="gx"></i><i class="gy"></i><i class="gy"></i></div>
+    <div class="hero__cards" aria-hidden="true">
+      <a class="fcard fcard--1" href="#w1" tabindex="-1" data-depth="1.2" data-r="-7" data-view><svg viewBox="0 0 640 400"><use href="#pv-suido"/></svg></a>
+      <a class="fcard fcard--2" href="#w2" tabindex="-1" data-depth=".7" data-r="5" data-view><svg viewBox="0 0 640 400"><use href="#pv-recruit"/></svg></a>
+      <a class="fcard fcard--3" href="#w3" tabindex="-1" data-depth=".9" data-r="4" data-view><svg viewBox="0 0 640 400"><use href="#pv-corp"/></svg></a>
+      <a class="fcard fcard--4" href="#w4" tabindex="-1" data-depth="1.4" data-r="-5" data-view><svg viewBox="0 0 640 400"><use href="#pv-deck"/></svg></a>
     </div>
-    <div style="display:grid;gap:18px">
-      <p>株式会社VILLIONは、Webサイトと業務システムの開発を行う会社です。ここでは、LP・採用ページ・コーポレートサイト（WordPressテーマ）・提案資料の4種類を掲載しています。どれもテンプレートを使わず、構成と配色を案件ごとに組み立てています。</p>
-      <ul class="intro__stack" aria-label="主な使用技術">
-        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>WordPress</li><li>SVG</li>
+    <div class="hero__center">
+      <p class="eyebrow hero__eyebrow">VILLION Inc. — Selected Works</p>
+      <h1 class="hero__title" id="hero-title"><span class="sr">制作例 Works</span><span class="hero__word" aria-hidden="true"><span class="lt" style="--i:0">W</span><span class="lt" style="--i:1">o</span><span class="lt" style="--i:2">r</span><span class="lt" style="--i:3">k</span><span class="lt" style="--i:4">s</span><span class="lt lt--dot" style="--i:5">.</span></span></h1>
+      <p class="hero__copy" data-split>業種ごとに、伝え方から設計する。</p>
+      <p class="hero__meta"><span>集客LP</span><span>採用LP</span><span>コーポレートサイト</span><span>提案資料</span></p>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">Scroll<i></i></div>
+  </div>
+</section>
+
+<!-- ===== 掲載について（注記） ===== -->
+<section class="notice" id="about" aria-labelledby="notice-title">
+  <div class="wrap notice__in">
+    <h2 class="eyebrow notice__label" id="notice-title">About these works</h2>
+    <div class="notice__body">
+      <p class="notice__text" data-reveal><span class="notice__mark" aria-hidden="true"></span>受託でお預かりした案件は守秘義務により公開できないため、ここでは<b>VILLIONが独自に企画・制作したWebサイト</b>を掲載しています。</p>
+      <p class="notice__sub" data-reveal style="--d:.12s">業種ごとに、誰に・何を・どの順で伝えるかを決めてから、構成・デザイン・実装まで一貫して手がけています。図版はすべてSVGとCSSで描き、外部ライブラリは使っていません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 目次 ===== -->
+<section class="idx" aria-labelledby="idx-title">
+  <div class="wrap">
+    <div class="idx__head"><h2 class="eyebrow" id="idx-title">Index</h2><p class="idx__count" aria-hidden="true">04 Projects</p></div>
+    <ol class="idx__list">
+      <li data-reveal><a href="#w1" data-peek="pv-suido" data-view><span class="idx__n">01</span><span class="idx__t">水まわり修理サービスの集客LP</span><span class="idx__k">Landing Page</span><span class="idx__a" aria-hidden="true">↓</span></a></li>
+      <li data-reveal style="--d:.06s"><a href="#w2" data-peek="pv-recruit" data-view><span class="idx__n">02</span><span class="idx__t">訪問看護ステーションの看護師採用LP</span><span class="idx__k">Recruiting</span><span class="idx__a" aria-hidden="true">↓</span></a></li>
+      <li data-reveal style="--d:.12s"><a href="#w3" data-peek="pv-corp" data-view><span class="idx__n">03</span><span class="idx__t">精密部品メーカーのコーポレートサイト</span><span class="idx__k">Corporate / WordPress</span><span class="idx__a" aria-hidden="true">↓</span></a></li>
+      <li data-reveal style="--d:.18s"><a href="#w4" data-peek="pv-deck" data-view><span class="idx__n">04</span><span class="idx__t">受発注サービスの事業提案資料</span><span class="idx__k">Pitch Deck</span><span class="idx__a" aria-hidden="true">↓</span></a></li>
+    </ol>
+  </div>
+  <div class="peek" aria-hidden="true"><svg viewBox="0 0 640 400"><use href="#pv-suido"/></svg></div>
+</section>
+
+<div class="mq" aria-hidden="true">
+  <div class="mq__track"><span>Landing Page</span><i></i><span>Recruiting Site</span><i></i><span>Corporate Site</span><i></i><span>WordPress Theme</span><i></i><span>Pitch Deck</span><i></i><span>Landing Page</span><i></i><span>Recruiting Site</span><i></i><span>Corporate Site</span><i></i><span>WordPress Theme</span><i></i><span>Pitch Deck</span><i></i></div>
+</div>
+
+<!-- ===== 01 集客LP：デバイスの中で実際のページが流れる ===== -->
+<section class="work work--device" id="w1" data-scene="device" aria-labelledby="w1-title">
+  <div class="work__sticky">
+    <div class="work__text">
+      <p class="work__num" aria-hidden="true">01</p>
+      <p class="eyebrow">Landing Page — 水まわり修理</p>
+      <h2 class="work__title" id="w1-title">水まわり修理サービスの集客LP<br>「みずまわり119 港南」</h2>
+      <p class="work__desc">「呼んだら高額だった」という不安を先回りして解消する構成。料金表とFAQで判断材料をそろえ、電話・LINE・フォームのどれからでも相談できるようにしました。</p>
+      <ul class="work__points">
+        <li>スマホ下部に固定の相談ボタン。電話番号はタップで発信</li>
+        <li>料金は「基本＋作業＋部品」の内訳まで表で開示</li>
+        <li>対応エリアはSVGの概略図とチップで表示</li>
       </ul>
+      <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>SVG</li></ul>
+      <a class="btn" href="works/lp-suido/index.html">ページを見る <span class="arrow" aria-hidden="true">→</span></a>
     </div>
-  </section>
-
-  <div class="wrap works">
-
-    <article class="work work--wide">
-      <a class="work__thumb" href="works/lp-suido/index.html" tabindex="-1" aria-hidden="true">
-        <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
-          <rect width="640" height="400" fill="#0b4fa3"/>
-          <rect width="640" height="40" fill="#fff"/><rect x="24" y="12" width="16" height="16" rx="4" fill="#0b4fa3"/><rect x="48" y="14" width="90" height="12" rx="3" fill="#1a2230"/><rect x="510" y="12" width="106" height="16" rx="3" fill="#0b4fa3"/>
-          <rect x="40" y="76" width="44" height="14" rx="2" fill="none" stroke="#fff" opacity=".7"/><rect x="90" y="76" width="44" height="14" rx="2" fill="none" stroke="#fff" opacity=".7"/>
-          <rect x="40" y="106" width="250" height="28" rx="3" fill="#fff"/><rect x="40" y="142" width="200" height="28" rx="3" fill="#ffd23f"/><rect x="40" y="178" width="170" height="28" rx="3" fill="#fff"/>
-          <rect x="40" y="226" width="80" height="54" rx="8" fill="#fff"/><rect x="128" y="226" width="80" height="54" rx="8" fill="#fff"/><rect x="216" y="226" width="80" height="54" rx="8" fill="#fff"/>
-          <rect x="40" y="298" width="150" height="40" rx="20" fill="#ffd23f"/><rect x="200" y="298" width="150" height="40" rx="20" fill="#00853c"/>
-          <circle cx="480" cy="200" r="120" fill="#3d7fd1" opacity=".55"/><path d="M480 130c-26 36-46 58-46 86a46 46 0 0 0 92 0c0-28-20-50-46-86Z" fill="#fff"/>
-          <path d="M-20 400 Q320 330 660 400Z" fill="#fff"/>
-          <!-- phone mock with fixed CTA -->
-          <g transform="translate(560 200)"><rect width="64" height="128" rx="10" fill="#1a2230"/><rect x="4" y="6" width="56" height="116" rx="6" fill="#fff"/><rect x="4" y="6" width="56" height="40" fill="#0b4fa3"/><rect x="4" y="104" width="56" height="18" fill="#eef2f7"/><rect x="7" y="107" width="22" height="12" rx="2" fill="#ffd23f"/><rect x="31" y="107" width="13" height="12" rx="2" fill="#00853c"/><rect x="46" y="107" width="11" height="12" rx="2" fill="#0b4fa3"/></g>
-        </svg>
-      </a>
-      <div class="work__body">
-        <div class="work__top"><span class="work__no">LP</span><span class="work__kind">集客LP</span></div>
-        <h2>水まわり修理サービスの集客LP「みずまわり119 港南」</h2>
-        <ul class="work__tech" aria-label="使用技術"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>インラインSVG</li></ul>
-        <ul class="work__points">
-          <li>「作業前に金額確定」を軸に、料金表とFAQで不安を先回りして解消する構成</li>
-          <li>スマホ下部に電話・LINE・フォームの固定CTA。電話番号はタップで発信</li>
-          <li>対応エリアは概略図とチップで表示し、地域名での検索流入も意識</li>
-        </ul>
-        <div class="work__links"><a class="work__link" href="works/lp-suido/index.html">ページを見る <span aria-hidden="true">→</span></a></div>
+    <div class="work__stage">
+      <div class="work__pin">
+        <a class="dev" href="works/lp-suido/index.html" tabindex="-1" aria-hidden="true" data-view>
+          <span class="dev__now"><i></i><b>Live</b><span class="dev__sec">ファーストビュー</span></span>
+          <span class="laptop">
+            <span class="laptop__screen screen" data-live="works/lp-suido/index.html" data-w="1280" inert>
+              <svg class="poster" viewBox="0 0 640 400" preserveAspectRatio="xMidYMin slice"><use href="#pv-suido"/></svg>
+            </span>
+            <span class="laptop__base"></span>
+          </span>
+          <span class="phone">
+            <span class="phone__screen screen" data-live="works/lp-suido/index.html" data-w="390" data-mobile inert>
+              <svg class="poster" viewBox="0 0 375 812" preserveAspectRatio="xMidYMin slice"><use href="#pv-suido-m"/></svg>
+            </span>
+          </span>
+        </a>
       </div>
-    </article>
+    </div>
+  </div>
+</section>
 
-    <article class="work">
-      <a class="work__thumb" href="works/lp-recruit/index.html" tabindex="-1" aria-hidden="true">
-        <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
-          <rect width="640" height="400" fill="#fbf6ee"/>
-          <path d="M420 40c110 0 200 70 200 170s-80 180-200 180-190-70-180-180S310 40 420 40Z" fill="#e4ece2"/>
-          <path d="M400 210l60-46 60 46v86H400z" fill="#fff"/><rect x="448" y="240" width="26" height="56" fill="#c46a4a"/>
-          <circle cx="330" cy="200" r="24" fill="#efe3cf"/><path d="M296 300c0-50 16-80 34-80s34 30 34 80z" fill="#5d7a62"/>
-          <rect x="40" y="56" width="110" height="10" rx="5" fill="#a2533a"/>
-          <rect x="40" y="86" width="230" height="30" fill="#efe3cf"/><rect x="40" y="86" width="220" height="24" rx="3" fill="#2b2a27"/>
-          <rect x="40" y="128" width="230" height="30" fill="#efe3cf"/><rect x="40" y="128" width="200" height="24" rx="3" fill="#2b2a27"/>
-          <rect x="40" y="180" width="200" height="8" rx="4" fill="#8a857b"/><rect x="40" y="196" width="180" height="8" rx="4" fill="#8a857b"/><rect x="40" y="212" width="160" height="8" rx="4" fill="#8a857b"/>
-          <rect x="40" y="244" width="70" height="20" rx="10" fill="#fff" stroke="#e3d9c8"/><rect x="116" y="244" width="70" height="20" rx="10" fill="#fff" stroke="#e3d9c8"/><rect x="192" y="244" width="70" height="20" rx="10" fill="#fff" stroke="#e3d9c8"/>
-          <rect x="0" y="320" width="640" height="80" fill="#3f5a45"/>
-          <rect x="40" y="342" width="140" height="36" rx="10" fill="#fff"/><rect x="196" y="342" width="90" height="36" rx="10" fill="none" stroke="#7d9a82"/><rect x="300" y="342" width="90" height="36" rx="10" fill="none" stroke="#7d9a82"/>
-        </svg>
-      </a>
-      <div class="work__body">
-        <div class="work__top"><span class="work__no">RECRUIT</span><span class="work__kind">採用LP</span></div>
-        <h2>訪問看護ステーションの看護師採用LP</h2>
-        <ul class="work__tech" aria-label="使用技術"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>インラインSVG</li></ul>
-        <ul class="work__points">
-          <li>応募をためらう理由（オンコール・単独訪問）に正面から答える構成</li>
-          <li>給与は内訳まで開示し、1日の流れはタイムラインと訪問件数の推移で表示</li>
-          <li>「見学のみ」も選べる応募フォームで、最初の一歩のハードルを下げる設計</li>
-        </ul>
-        <div class="work__links"><a class="work__link" href="works/lp-recruit/index.html">ページを見る <span aria-hidden="true">→</span></a></div>
-      </div>
-    </article>
-
-    <article class="work">
-      <a class="work__thumb" href="works/corporate/index.html" tabindex="-1" aria-hidden="true">
-        <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
-          <defs><pattern id="gr" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#2c4466" stroke-width="1"/></pattern></defs>
-          <rect width="640" height="400" fill="#10213a"/><rect width="640" height="400" fill="url(#gr)" opacity=".6"/>
-          <rect width="640" height="40" fill="#f5f5f1"/><path d="M34 10l8 4.5v9L34 28l-8-4.5v-9z" fill="#10213a"/><rect x="50" y="14" width="70" height="12" rx="2" fill="#10213a"/>
-          <rect x="400" y="14" width="40" height="10" rx="2" fill="#4d5866"/><rect x="452" y="14" width="40" height="10" rx="2" fill="#4d5866"/><rect x="510" y="10" width="100" height="20" rx="2" fill="#b23610"/>
-          <rect x="36" y="80" width="120" height="8" rx="2" fill="#ff9d7c"/>
-          <rect x="36" y="104" width="250" height="26" rx="2" fill="#fff"/><rect x="36" y="140" width="210" height="26" rx="2" fill="#fff"/>
-          <rect x="36" y="186" width="240" height="7" rx="3" fill="#8b9bb3"/><rect x="36" y="200" width="220" height="7" rx="3" fill="#8b9bb3"/>
-          <rect x="36" y="228" width="130" height="36" rx="2" fill="#b23610"/><rect x="176" y="228" width="110" height="36" rx="2" fill="none" stroke="#fff"/>
-          <g fill="none" stroke="#c9d4e3" stroke-width="1.5"><rect x="340" y="90" width="90" height="110"/><circle cx="530" cy="145" r="60"/><circle cx="530" cy="145" r="24" stroke="#ff9d7c"/></g>
-          <g stroke="#2c4466"><rect x="320" y="240" width="300" height="60" fill="none"/><path d="M420 240v60M520 240v60"/></g>
-          <rect x="336" y="256" width="40" height="6" fill="#8b9bb3"/><rect x="336" y="270" width="60" height="16" fill="#fff"/><rect x="436" y="256" width="40" height="6" fill="#8b9bb3"/><rect x="436" y="270" width="40" height="16" fill="#fff"/><rect x="536" y="256" width="40" height="6" fill="#8b9bb3"/><rect x="536" y="270" width="50" height="16" fill="#fff"/>
-          <rect x="0" y="330" width="640" height="70" fill="#f5f5f1"/><g fill="#fff" stroke="#d4d9e0"><rect x="36" y="344" width="180" height="56"/><rect x="230" y="344" width="180" height="56"/><rect x="424" y="344" width="180" height="56"/></g>
-        </svg>
-      </a>
-      <div class="work__body">
-        <div class="work__top"><span class="work__no">CORPORATE</span><span class="work__kind">コーポレートサイト</span></div>
-        <h2>精密部品メーカーのコーポレートサイト（WordPressテーマ付き）</h2>
-        <ul class="work__tech" aria-label="使用技術"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>WordPress（クラシックテーマ）</li></ul>
-        <ul class="work__points">
-          <li>トップ・事業紹介・会社概要・お問い合わせの4ページ。図面をモチーフにした設計</li>
-          <li>同じCSSを共有するWordPressオリジナルテーマ付き。お知らせは投稿から自動表示</li>
-          <li>図面添付つきの問い合わせフォーム。プラグインのショートコードにも差し替え可能</li>
-        </ul>
-        <div class="work__links">
-          <a class="work__link" href="works/corporate/index.html">サイトを見る <span aria-hidden="true">→</span></a>
-          <a class="work__link work__link--sub" href="works/corporate/wp-theme/villion-corporate/style.css">テーマのCSSを見る</a>
+<!-- ===== 02 採用LP：線画から配色、実装へ ===== -->
+<section class="work work--draw" id="w2" data-scene="draw" aria-labelledby="w2-title">
+  <div class="work__sticky">
+    <div class="work__text">
+      <p class="work__num" aria-hidden="true">02</p>
+      <p class="eyebrow">Recruiting — 訪問看護</p>
+      <h2 class="work__title" id="w2-title">訪問看護ステーションの<br>看護師採用LP</h2>
+      <p class="work__desc">応募をためらう理由（オンコール・ひとりでの訪問）に正面から答える構成。明朝体と生成りの配色で、病院とは違う「暮らしの場」の仕事であることを伝えます。</p>
+      <ul class="work__points">
+        <li>給与は内訳まで開示し、1日の流れはタイムラインで表示</li>
+        <li>「見学のみ」も選べる応募フォームで最初の一歩を軽く</li>
+        <li>人物・建物のイラストもすべてSVGで作画</li>
+      </ul>
+      <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>SVG</li></ul>
+      <a class="btn" href="works/lp-recruit/index.html">ページを見る <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    <div class="work__stage">
+      <div class="work__pin">
+        <div class="drawbox">
+          <a class="browser" href="works/lp-recruit/index.html" tabindex="-1" aria-hidden="true" data-view>
+            <span class="browser__bar"><i></i><i></i><i></i><span class="browser__url">komorebi-zaka / recruit</span></span>
+            <span class="browser__view screen" data-live="works/lp-recruit/index.html" data-w="1280" inert>
+              <svg class="draw" viewBox="0 0 1280 800" preserveAspectRatio="xMidYMin slice">
+                <defs><pattern id="dr-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#e4e4e4" stroke-width="1"/></pattern></defs>
+                <rect class="dr-bg" width="1280" height="800" fill="#fbf6ee"/>
+                <rect class="dr-grid" width="1280" height="800" fill="url(#dr-grid)"/>
+                <!-- header -->
+                <circle class="w" cx="62" cy="38" r="17" fill="#3f5a45"/>
+                <rect class="w" x="90" y="24" width="120" height="7" rx="3" fill="#8a857b"/>
+                <rect class="w" x="90" y="37" width="232" height="14" rx="3" fill="#2b2a27"/>
+                <rect class="w" x="1100" y="19" width="140" height="40" rx="20" fill="#2b2a27"/>
+                <text class="tx" x="1170" y="45" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">応募・見学</text>
+                <!-- hero text -->
+                <rect class="w ph" x="80" y="146" width="236" height="20" rx="2" fill="none"/>
+                <text class="tx" x="80" y="162" fill="#a2533a" font-size="16" font-weight="700" letter-spacing="2">看護師 募集（常勤・パート）</text>
+                <rect class="w" x="80" y="224" width="440" height="24" fill="#efe3cf"/>
+                <rect class="w" x="80" y="320" width="500" height="24" fill="#efe3cf"/>
+                <rect class="w ph" x="80" y="186" width="440" height="66" rx="2" fill="none"/>
+                <rect class="w ph" x="80" y="282" width="500" height="66" rx="2" fill="none"/>
+                <text class="tx serif" x="80" y="243" fill="#2b2a27" font-size="62" font-weight="600">病棟の経験は、</text>
+                <text class="tx serif" x="80" y="339" fill="#2b2a27" font-size="62" font-weight="600">家でこそ活きる。</text>
+                <rect class="w" x="80" y="390" width="500" height="9" rx="4" fill="#b5afa4"/>
+                <rect class="w" x="80" y="414" width="520" height="9" rx="4" fill="#b5afa4"/>
+                <rect class="w" x="80" y="438" width="340" height="9" rx="4" fill="#b5afa4"/>
+                <rect class="w" x="80" y="482" width="150" height="36" rx="18" fill="#fff"/>
+                <rect class="w" x="240" y="482" width="140" height="36" rx="18" fill="#fff"/>
+                <rect class="w" x="390" y="482" width="104" height="36" rx="18" fill="#fff"/>
+                <rect class="w" x="504" y="482" width="214" height="36" rx="18" fill="#fff"/>
+                <g class="tx" font-size="13" font-weight="700" fill="#2b2a27" text-anchor="middle"><text x="155" y="505">訪問看護 未経験可</text><text x="310" y="505">オンコール当番制</text><text x="442" y="505">土日祝休み</text><text x="611" y="505">電動アシスト自転車・社用車</text></g>
+                <!-- hero art -->
+                <g transform="translate(720 64) scale(1.04)">
+                  <path class="w" d="M260 20c120 0 230 80 240 210s-80 260-230 270S10 420 20 260 140 20 260 20Z" fill="#e4ece2"/>
+                  <path class="w" d="M60 400c80-40 140-120 200-120s130 70 200 110v40H60z" fill="#c9d8c6"/>
+                  <circle class="w" cx="440" cy="60" r="24" fill="#efe3cf"/>
+                  <path class="w" d="M300 230l80-60 80 60v110H300z" fill="#ffffff"/>
+                  <path class="w keep" d="M290 236l90-70 90 70" stroke="#3f5a45" stroke-width="10" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+                  <rect class="w" x="360" y="270" width="40" height="70" rx="4" fill="#c46a4a"/>
+                  <rect class="w" x="318" y="250" width="28" height="28" rx="3" fill="#efe3cf"/>
+                  <rect class="w" x="414" y="250" width="28" height="28" rx="3" fill="#efe3cf"/>
+                  <path class="w" d="M120 340c0-60 26-104 60-104s60 44 60 104z" fill="#5d7a62"/>
+                  <circle class="w" cx="180" cy="190" r="34" fill="#efe3cf"/>
+                  <path class="w" d="M146 182c4-26 24-38 40-36 18 2 30 16 28 34-10-8-30-14-68 2Z" fill="#2b2a27"/>
+                  <rect class="w" x="170" y="250" width="20" height="30" rx="4" fill="#fbf6ee"/>
+                  <path class="w" d="M226 300h40v40h-40z" fill="#c46a4a"/>
+                  <path class="w keep" d="M236 300v-10a10 10 0 0 1 20 0v10" stroke="#a2533a" stroke-width="5" fill="none"/>
+                  <path class="tx" d="M240 320h12M246 314v12" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                  <ellipse class="w" cx="90" cy="120" rx="16" ry="8" transform="rotate(-30 90 120)" fill="#5d7a62"/>
+                  <ellipse class="w" cx="420" cy="100" rx="18" ry="9" transform="rotate(25 420 100)" fill="#5d7a62"/>
+                  <ellipse class="w" cx="70" cy="300" rx="14" ry="7" transform="rotate(40 70 300)" fill="#5d7a62"/>
+                </g>
+                <!-- next section -->
+                <rect class="w" x="0" y="664" width="1280" height="136" fill="#ffffff"/>
+                <rect class="w ph" x="80" y="694" width="120" height="18" rx="2" fill="none"/>
+                <rect class="w ph" x="80" y="728" width="560" height="40" rx="2" fill="none"/>
+                <text class="tx serif" x="80" y="709" fill="#a2533a" font-size="15" letter-spacing="3">01 ／ 働き方</text>
+                <text class="tx serif" x="80" y="760" fill="#2b2a27" font-size="34" font-weight="600">ひとりで訪問する不安を、</text>
+                <rect class="w" x="740" y="700" width="460" height="120" rx="32" fill="#e4ece2"/>
+              </svg>
+            </span>
+          </a>
+          <ol class="drawbox__steps" aria-hidden="true"><li class="is-on">Wireframe</li><li>Design</li><li>Live</li></ol>
         </div>
       </div>
-    </article>
-
-    <article class="work work--wide">
-      <a class="work__thumb" href="works/deck/index.html" tabindex="-1" aria-hidden="true">
-        <svg viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice">
-          <rect width="640" height="400" fill="#0f1013"/>
-          <g transform="translate(70 60) rotate(-4 250 140)"><rect width="500" height="281" rx="4" fill="#f3f1ea"/><rect x="30" y="28" width="26" height="12" rx="2" fill="#f5a524"/><rect x="30" y="54" width="300" height="20" rx="2" fill="#16181d"/><g fill="#fff" stroke="#d8d3c4"><rect x="30" y="100" width="140" height="150" rx="8"/><rect x="180" y="100" width="140" height="150" rx="8"/><rect x="330" y="100" width="140" height="150" rx="8"/></g><rect x="194" y="80" width="112" height="190" rx="8" fill="#16181d" transform="translate(0 0)" opacity="0"/><rect x="180" y="100" width="140" height="150" rx="8" fill="#16181d"/><rect x="200" y="124" width="70" height="10" rx="2" fill="#f5a524"/><rect x="200" y="146" width="90" height="18" rx="2" fill="#f3f1ea"/></g>
-          <g transform="translate(40 40)"><rect width="500" height="281" rx="4" fill="#16181d" stroke="#2a2e37"/><rect x="34" y="40" width="80" height="10" rx="2" fill="#f5a524"/><rect x="34" y="70" width="330" height="34" rx="3" fill="#f3f1ea"/><rect x="34" y="114" width="250" height="34" rx="3" fill="#f5a524"/><rect x="34" y="176" width="260" height="10" rx="3" fill="#7d8594"/><rect x="34" y="236" width="24" height="24" rx="5" fill="#f5a524"/><rect x="66" y="243" width="120" height="10" rx="3" fill="#7d8594"/></g>
-          <rect x="250" y="356" width="140" height="4" rx="2" fill="#22252c"/><rect x="250" y="356" width="40" height="4" rx="2" fill="#f5a524"/>
-        </svg>
-      </a>
-      <div class="work__body">
-        <div class="work__top"><span class="work__no">DECK</span><span class="work__kind">提案資料</span></div>
-        <h2>受発注デジタル化サービスの事業提案資料（HTMLスライド12枚）</h2>
-        <ul class="work__tech" aria-label="使用技術"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>インラインSVG</li></ul>
-        <ul class="work__points">
-          <li>16:9を画面サイズに合わせて拡縮。矢印キー・スワイプ・ボタンで操作、印刷にも対応</li>
-          <li>課題→解決策→仕組み→収益の試算→判断基準まで、意思決定の順に組んだ構成</li>
-          <li>数字はすべて前提を明示した試算として表示し、根拠のない実績は書かない方針</li>
-        </ul>
-        <div class="work__links"><a class="work__link" href="works/deck/index.html">スライドを見る <span aria-hidden="true">→</span></a></div>
-      </div>
-    </article>
-
+    </div>
   </div>
+</section>
+
+<!-- ===== 03 コーポレート：横に流れるギャラリー ===== -->
+<section class="work work--hs" id="w3" data-scene="gallery" aria-labelledby="w3-title">
+  <div class="work__sticky hs__sticky">
+    <div class="work__text hs__intro">
+      <p class="work__num" aria-hidden="true">03</p>
+      <p class="eyebrow">Corporate — 精密部品メーカー</p>
+      <h2 class="work__title" id="w3-title">精密部品メーカーの<br>コーポレートサイト</h2>
+      <p class="work__desc">図面をモチーフにした4ページ構成。同じCSSを共有するWordPressのオリジナルテーマ付きで、お知らせは投稿から自動で表示されます。</p>
+      <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>WordPress</li></ul>
+      <a class="btn" href="works/corporate/index.html">サイトを見る <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    <div class="hs__track">
+      <a class="frame" href="works/corporate/index.html" data-view>
+        <span class="frame__bar"><i></i><i></i><i></i><span class="frame__url">minase-seiko / top</span></span>
+        <span class="frame__view screen" data-live="works/corporate/index.html" data-w="1280" inert><svg class="poster" viewBox="0 0 640 400" preserveAspectRatio="xMidYMin slice"><use href="#pv-corp"/></svg></span>
+        <span class="frame__cap"><b>01</b>トップ — 図面が描かれるファーストビュー</span>
+      </a>
+      <a class="frame" href="works/corporate/business.html" data-view>
+        <span class="frame__bar"><i></i><i></i><i></i><span class="frame__url">minase-seiko / business</span></span>
+        <span class="frame__view screen" data-live="works/corporate/business.html" data-w="1280" inert><svg class="poster" viewBox="0 0 640 400" preserveAspectRatio="xMidYMin slice"><use href="#pv-corp-biz"/></svg></span>
+        <span class="frame__cap"><b>02</b>事業紹介 — 工程ごとの図解と設備一覧</span>
+      </a>
+      <a class="frame" href="works/corporate/company.html" data-view>
+        <span class="frame__bar"><i></i><i></i><i></i><span class="frame__url">minase-seiko / company</span></span>
+        <span class="frame__view screen" data-live="works/corporate/company.html" data-w="1280" inert><svg class="poster" viewBox="0 0 640 400" preserveAspectRatio="xMidYMin slice"><use href="#pv-corp-co"/></svg></span>
+        <span class="frame__cap"><b>03</b>会社概要 — メッセージ・沿革・アクセス</span>
+      </a>
+      <a class="frame" href="works/corporate/contact.html" data-view>
+        <span class="frame__bar"><i></i><i></i><i></i><span class="frame__url">minase-seiko / contact</span></span>
+        <span class="frame__view screen" data-live="works/corporate/contact.html" data-w="1280" inert><svg class="poster" viewBox="0 0 640 400" preserveAspectRatio="xMidYMin slice"><use href="#pv-corp-ct"/></svg></span>
+        <span class="frame__cap"><b>04</b>お問い合わせ — 図面を添付できるフォーム</span>
+      </a>
+      <div class="hs__end">
+        <p class="hs__end-big" aria-hidden="true">WP</p>
+        <h3>WordPressテーマとしても納品</h3>
+        <p>静的HTMLと同じCSSを共有するクラシックテーマ。トップ・事業紹介・会社概要・お問い合わせの固定ページテンプレートを含みます。</p>
+        <a class="textlink" href="works/corporate/wp-theme/villion-corporate/style.css">テーマのCSSを見る</a>
+      </div>
+    </div>
+    <div class="hs__bar" aria-hidden="true"><i></i></div>
+  </div>
+</section>
+
+<!-- ===== 04 提案資料：スクロールでスライドが進む ===== -->
+<section class="work work--deck" id="w4" data-scene="deck" data-dark aria-labelledby="w4-title">
+  <div class="work__sticky">
+    <div class="work__text">
+      <p class="work__num" aria-hidden="true">04</p>
+      <p class="eyebrow">Pitch Deck — 受発注サービス</p>
+      <h2 class="work__title" id="w4-title">受発注デジタル化サービスの<br>事業提案資料</h2>
+      <p class="work__desc">HTMLで組んだ12枚のスライド。課題→解決策→仕組み→収益の試算→判断基準まで、意思決定の順に組んだ構成。数字はすべて前提を明示した試算として示しています。</p>
+      <div class="deckinfo" aria-hidden="true">
+        <p class="deckinfo__n"><b class="deckinfo__cur">01</b><span>/ 12</span></p>
+        <p class="deckinfo__label">表紙</p>
+      </div>
+      <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>SVG</li></ul>
+      <a class="btn btn--light" href="works/deck/index.html">スライドを見る <span class="arrow" aria-hidden="true">→</span></a>
+    </div>
+    <div class="work__stage">
+      <div class="work__pin">
+        <a class="deck3d" href="works/deck/index.html" tabindex="-1" aria-hidden="true" data-view>
+          <span class="deck3d__ghost deck3d__ghost--2"></span>
+          <span class="deck3d__ghost deck3d__ghost--1"></span>
+          <span class="deck3d__screen screen" data-live="works/deck/index.html?embed" data-w="1280" data-mobile inert>
+            <svg class="poster" viewBox="0 0 1280 720"><use href="#pv-deck-cover"/></svg>
+          </span>
+          <span class="deck3d__bar"><i></i></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== つくり方 ===== -->
+<section class="craft" aria-labelledby="craft-title">
+  <div class="wrap">
+    <div class="craft__head">
+      <p class="eyebrow">How it's made</p>
+      <h2 class="h2" id="craft-title" data-split>画像に頼らず、<br>コードで描く。</h2>
+    </div>
+    <dl class="stats">
+      <div data-reveal><dt>外部ライブラリ</dt><dd><b data-count="0">0</b></dd><p>素のHTML・CSS・JavaScriptだけで、スクロール連動の演出まで組んでいます。</p></div>
+      <div data-reveal style="--d:.08s"><dt>写真・画像素材</dt><dd><b data-count="0">0</b></dd><p>人物・建物・図面・グラフは、すべてSVGとCSSで描いています。</p></div>
+      <div data-reveal style="--d:.16s"><dt>このページで描いているSVG要素</dt><dd><b data-count="0" data-live-count>—</b></dd><p>読み込んだ時点で、ブラウザが数えた実数を表示しています。</p></div>
+    </dl>
+    <ul class="craft__list">
+      <li data-reveal><b>スマホとPC</b>375pxの画面から1440pxまで、崩れ・横はみ出しがないことを確認しています。</li>
+      <li data-reveal style="--d:.06s"><b>動きを減らす設定</b>OSで「視差効果を減らす」を選んでいる方には、演出を止めて表示します。</li>
+      <li data-reveal style="--d:.12s"><b>JavaScriptがなくても</b>演出が動かない環境でも、本文と画面はすべて読めるように作っています。</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== 会社サイトへ ===== -->
+<section class="cta" data-dark aria-labelledby="cta-title">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2 class="cta__title" id="cta-title" data-split>こういうサイトを、<br>一緒につくりませんか。</h2>
+    <div class="cta__row">
+      <p>LP・採用ページ・コーポレートサイト・WordPress・提案資料まで。業種と目的に合わせて、構成から実装まで一貫してお受けしています。ご相談は会社サイトからどうぞ。</p>
+      <a class="cta__circle" href="https://villion.co.jp/" data-company data-magnetic>会社サイトへ<span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</section>
 </main>
 
-<footer class="ft">
-  <div class="wrap ft__in">
-    <b>VILLION</b>
-    <span>株式会社VILLION　Webサイト・業務システムの設計と開発</span>
-    <span>&copy; 2026 VILLION Inc.</span>
+<footer class="ft" data-dark>
+  <div class="wrap">
+    <div class="ft__top">
+      <div>
+        <p class="ft__name">株式会社VILLION</p>
+        <p class="ft__desc">業務システム・Webアプリ・Webサイトの設計と開発<br>受託でお預かりした案件は守秘義務により公開できないため、このページではVILLIONが独自に企画・制作したWebサイトを掲載しています。</p>
+      </div>
+      <nav class="ft__links" aria-label="フッターメニュー"><a href="#w1">集客LP</a><a href="#w2">採用LP</a><a href="#w3">コーポレート</a><a href="#w4">提案資料</a><a href="https://villion.co.jp/" data-company>会社サイト ↗</a></nav>
+    </div>
+    <div class="ft__mark" aria-hidden="true"><svg viewBox="0 0 4810 838.5" focusable="false"><use href="#vl-logo"/></svg></div>
+    <p class="ft__copy"><span>&copy; 2026 VILLION Inc.</span><span>Typeface: Mulish (SIL OFL 1.1)</span></p>
   </div>
 </footer>
+
+<nav class="rail" aria-label="制作例の位置">
+  <a href="#w1"><i></i><span>01</span></a><a href="#w2"><i></i><span>02</span></a><a href="#w3"><i></i><span>03</span></a><a href="#w4"><i></i><span>04</span></a>
+</nav>
 </body>
 </html>

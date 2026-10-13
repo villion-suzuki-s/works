@@ -6,7 +6,9 @@
 <title>看護師募集｜訪問看護ステーション こもれび坂</title>
 <meta name="description" content="訪問看護ステーション こもれび坂の看護師採用ページ。オンコールは手当付きの当番制、同行訪問から始める研修、1日の流れや給与・待遇、先輩看護師の声をご紹介します。見学のみのお申し込みも受け付けています。">
 <meta name="theme-color" content="#3f5a45">
+<script>(function(h){try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)h.className+=' fx';}catch(e){}setTimeout(function(){if(!window.FX_READY)h.classList.remove('fx');},2500);})(document.documentElement);</script>
 <link rel="stylesheet" href="style.css">
+<script src="fx.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
@@ -37,12 +39,15 @@
         <svg viewBox="0 0 520 520">
           <path d="M260 20c120 0 230 80 240 210s-80 260-230 270S10 420 20 260 140 20 260 20Z" fill="#e4ece2"/>
           <path d="M60 400c80-40 140-120 200-120s130 70 200 110v40H60z" fill="#c9d8c6"/>
+          <g class="art-house">
           <!-- house -->
           <path d="M300 230l80-60 80 60v110H300z" fill="#ffffff"/>
           <path d="M290 236l90-70 90 70" stroke="#3f5a45" stroke-width="10" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
           <rect x="360" y="270" width="40" height="70" rx="4" fill="#c46a4a"/>
           <rect x="318" y="250" width="28" height="28" rx="3" fill="#efe3cf"/>
           <rect x="414" y="250" width="28" height="28" rx="3" fill="#efe3cf"/>
+          </g>
+          <g class="art-nurse">
           <!-- nurse figure -->
           <circle cx="180" cy="190" r="34" fill="#efe3cf"/>
           <path d="M146 182c4-26 24-38 40-36 18 2 30 16 28 34-10-8-30-14-68 2Z" fill="#2b2a27"/>
@@ -51,14 +56,15 @@
           <path d="M226 300h40v40h-40z" fill="#c46a4a"/>
           <path d="M236 300v-10a10 10 0 0 1 20 0v10" stroke="#a2533a" stroke-width="5" fill="none"/>
           <path d="M240 320h12M246 314v12" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-          <!-- leaves -->
-          <g fill="#5d7a62" opacity=".85">
-            <ellipse cx="90" cy="120" rx="16" ry="8" transform="rotate(-30 90 120)"/>
-            <ellipse cx="420" cy="100" rx="18" ry="9" transform="rotate(25 420 100)"/>
-            <ellipse cx="460" cy="160" rx="12" ry="6" transform="rotate(-15 460 160)"/>
-            <ellipse cx="70" cy="300" rx="14" ry="7" transform="rotate(40 70 300)"/>
           </g>
-          <circle cx="440" cy="60" r="24" fill="#efe3cf"/>
+          <!-- leaves -->
+          <g class="art-leaves" fill="#5d7a62" opacity=".85">
+            <g class="lf"><ellipse cx="90" cy="120" rx="16" ry="8" transform="rotate(-30 90 120)"/></g>
+            <g class="lf"><ellipse cx="420" cy="100" rx="18" ry="9" transform="rotate(25 420 100)"/></g>
+            <g class="lf"><ellipse cx="460" cy="160" rx="12" ry="6" transform="rotate(-15 460 160)"/></g>
+            <g class="lf"><ellipse cx="70" cy="300" rx="14" ry="7" transform="rotate(40 70 300)"/></g>
+          </g>
+          <circle class="art-sun" cx="440" cy="60" r="24" fill="#efe3cf"/>
         </svg>
       </div>
     </div>
@@ -163,9 +169,9 @@
             <g font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-size="12" fill="#5c5850">
               <text x="0" y="28">1か月目</text><text x="0" y="62">3か月目</text><text x="0" y="96">6か月目〜</text>
             </g>
-            <rect x="74" y="16" width="80" height="16" rx="8" fill="#c9d8c6"/>
-            <rect x="74" y="50" width="120" height="16" rx="8" fill="#5d7a62"/>
-            <rect x="74" y="84" width="160" height="16" rx="8" fill="#3f5a45"/>
+            <rect class="bar" x="74" y="16" width="80" height="16" rx="8" fill="#c9d8c6"/>
+            <rect class="bar" x="74" y="50" width="120" height="16" rx="8" fill="#5d7a62"/>
+            <rect class="bar" x="74" y="84" width="160" height="16" rx="8" fill="#3f5a45"/>
             <g font-family="Hiragino Sans, Noto Sans JP, sans-serif" font-size="13" font-weight="700" fill="#2b2a27"><text x="162" y="29">2件</text><text x="202" y="63">3件</text><text x="242" y="97">4件</text></g>
           </svg>
         </aside>

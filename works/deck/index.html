@@ -6,6 +6,7 @@
 <title>ハッチュウボード 事業提案｜町工場の受発注をデジタルに</title>
 <meta name="description" content="地方の中小製造業向け受発注デジタル化サービス「ハッチュウボード」の事業提案資料。FAXのままでも参加できる受発注の仕組み、ビジネスモデル、試算の前提、ロードマップを12枚のスライドで説明します。">
 <meta name="theme-color" content="#16181d">
+<script>(function(h){try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)h.className+=' fx';}catch(e){}setTimeout(function(){if(!window.DECK_READY)h.classList.remove('fx');},2500);})(document.documentElement);</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -315,7 +316,10 @@
   <button type="button" class="ctrl__btn" id="next" aria-label="次のスライド">
     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
-  <p class="ctrl__hint">← → キーで移動</p>
+  <button type="button" class="ctrl__btn ctrl__btn--grid" id="grid" aria-pressed="false" aria-label="スライド一覧">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+  </button>
+  <p class="ctrl__hint">← → キーで移動／G で一覧</p>
 </nav>
 <div class="progress" aria-hidden="true"><span id="bar"></span></div>
 

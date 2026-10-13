@@ -6,7 +6,9 @@
 <title>みずまわり119 港南｜トイレ・キッチン・お風呂の水まわり修理</title>
 <meta name="description" content="横浜市港南区を中心に、トイレのつまり・水漏れ・蛇口交換などの水まわり修理に対応。作業前に必ずお見積り、ご了承いただいてから作業します。お電話・LINE・フォームで受付。">
 <meta name="theme-color" content="#0b4fa3">
+<script>(function(h){try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)h.className+=' fx';}catch(e){}setTimeout(function(){if(!window.FX_READY)h.classList.remove('fx');},2500);})(document.documentElement);</script>
 <link rel="stylesheet" href="style.css">
+<script src="fx.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
@@ -34,18 +36,18 @@
     <div class="wrap hero__in">
       <div>
         <ul class="hero__tags">
-          <li>トイレ</li><li>キッチン</li><li>浴室</li><li>洗面所</li><li>給湯まわり</li>
+          <li style="--i:0">トイレ</li><li style="--i:1">キッチン</li><li style="--i:2">浴室</li><li style="--i:3">洗面所</li><li style="--i:4">給湯まわり</li>
         </ul>
         <h1 id="hero-title" style="margin-top:14px">水のトラブル、<br><em>見積りを見てから</em><br>決められます。</h1>
         <p class="hero__lead" style="margin-top:14px">港南区まわりの地域スタッフが伺います。点検・お見積りの内容にご納得いただけなければ、その場でお断りいただいて大丈夫です。</p>
         <ul class="hero__points" style="margin-top:22px">
-          <li><b>0<small>円</small></b>お見積り</li>
-          <li><b>8<small>-</small>22<small>時</small></b>年中受付</li>
-          <li><b>事前<small>確定</small></b>作業前に金額提示</li>
+          <li style="--i:0"><b>0<small>円</small></b>お見積り</li>
+          <li style="--i:1"><b>8<small>-</small>22<small>時</small></b>年中受付</li>
+          <li style="--i:2"><b>事前<small>確定</small></b>作業前に金額提示</li>
         </ul>
         <div class="hero__cta" style="margin-top:22px">
-          <a class="btn btn--tel" href="tel:000-0000-0000"><svg aria-hidden="true"><use href="#i-tel"/></svg><span><small>通話無料・すぐつながる</small>000-0000-0000</span></a>
-          <a class="btn btn--line" href="#contact"><svg aria-hidden="true"><use href="#i-line"/></svg>LINEで写真を送る</a>
+          <a class="btn btn--tel" style="--i:0" href="tel:000-0000-0000"><svg aria-hidden="true"><use href="#i-tel"/></svg><span><small>通話無料・すぐつながる</small>000-0000-0000</span></a>
+          <a class="btn btn--line" style="--i:1" href="#contact"><svg aria-hidden="true"><use href="#i-line"/></svg>LINEで写真を送る</a>
         </div>
       </div>
       <div class="hero__art" aria-hidden="true">
@@ -61,23 +63,27 @@
           <path d="M140 140h120a40 40 0 0 1 40 40v14h-40v-14H140z" fill="#e7eef8"/>
           <rect x="258" y="190" width="44" height="14" rx="4" fill="#c9d6e8"/>
           <!-- drops -->
-          <path d="M280 226c-8 12-14 19-14 27a14 14 0 0 0 28 0c0-8-6-15-14-27Z" fill="#9cc4f2"/>
-          <path d="M280 290c-5 8-9 12-9 17a9 9 0 0 0 18 0c0-5-4-9-9-17Z" fill="#9cc4f2" opacity=".7"/>
+          <path class="art-drop" d="M280 226c-8 12-14 19-14 27a14 14 0 0 0 28 0c0-8-6-15-14-27Z" fill="#9cc4f2"/>
+          <path class="art-drop art-drop--2" d="M280 290c-5 8-9 12-9 17a9 9 0 0 0 18 0c0-5-4-9-9-17Z" fill="#9cc4f2" opacity=".7"/>
           <!-- sink -->
           <path d="M150 320h260l-20 44H170z" fill="#e7eef8"/>
           <rect x="140" y="312" width="280" height="12" rx="6" fill="#ffffff"/>
           <!-- wrench -->
-          <g transform="rotate(-35 360 120)">
+          <g class="art-wrench"><g transform="rotate(-35 360 120)">
             <rect x="330" y="112" width="90" height="16" rx="8" fill="#ffd23f"/>
             <path d="M318 98a22 22 0 1 0 0 44l-6-10 6-6v-12l-6-6z" fill="#ffd23f"/>
             <circle cx="410" cy="120" r="4" fill="#083a78"/>
-          </g>
+          </g></g>
           <!-- check badge -->
-          <circle cx="96" cy="250" r="38" fill="#fff"/>
-          <path d="M78 251l12 12 22-24" stroke="#0b4fa3" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <g class="art-check"><circle cx="96" cy="250" r="38" fill="#fff"/>
+          <path class="art-check__mark" d="M78 251l12 12 22-24" stroke="#0b4fa3" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
         </svg>
       </div>
     </div>
+    <svg class="hero__wave" viewBox="0 0 2880 90" preserveAspectRatio="none" aria-hidden="true">
+      <path class="hero__wave-back" d="M0 50 C240 20 480 20 720 50 S1200 80 1440 50 S1920 20 2160 50 S2640 80 2880 50 V90 H0Z" fill="#ffffff" opacity=".28"/>
+      <path class="hero__wave-front" d="M0 56 C240 86 480 86 720 56 S1200 26 1440 56 S1920 86 2160 56 S2640 26 2880 56 V90 H0Z" fill="#ffffff"/>
+    </svg>
   </section>
 
   <section class="sec" aria-labelledby="trouble-title">
@@ -206,7 +212,8 @@
               <text x="258" y="295" font-size="16" fill="#083a78">栄区</text>
               <text x="390" y="250" font-size="16" fill="#083a78">金沢区</text>
             </g>
-            <circle cx="275" cy="215" r="7" fill="#ffd23f" stroke="#fff" stroke-width="3"/>
+            <circle class="map-ripple" cx="275" cy="215" r="7" fill="none" stroke="#ffd23f" stroke-width="3"/>
+            <circle class="map-pin" cx="275" cy="215" r="7" fill="#ffd23f" stroke="#fff" stroke-width="3"/>
           </svg>
         </div>
         <div class="area__list">
@@ -306,6 +313,7 @@
 </nav>
 
 <script>
+  window.FX_FORM = true;
   document.getElementById('contact-form').addEventListener('submit', function (e) {
     e.preventDefault();
     this.classList.add('is-done');

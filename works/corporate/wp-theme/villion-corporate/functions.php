@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'VILLION_THEME_VERSION', '1.0.0' );
+define( 'VILLION_THEME_VERSION', '1.1.0' );
 
 /**
  * テーマのセットアップ
@@ -47,6 +47,15 @@ function villion_enqueue_assets() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'villion_enqueue_assets' );
+
+/**
+ * 演出用のクラスを、描画の前に <html> へ付ける
+ * （動きを減らす設定の閲覧者には付けない。JSが読み込めなかったときは2.5秒後に外す）
+ */
+function villion_motion_flag() {
+	echo "<script>(function(h){try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches)h.className+=' fx';}catch(e){}setTimeout(function(){if(!window.FX_READY)h.classList.remove('fx');},2500);})(document.documentElement);</script>\n";
+}
+add_action( 'wp_head', 'villion_motion_flag', 1 );
 
 /**
  * タイトルの区切り文字を「｜」にする
