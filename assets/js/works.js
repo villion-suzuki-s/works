@@ -372,6 +372,37 @@
     }, { init: function (s) { s.lives = ls; s.measure = function () { workTarget(s); }; } });
   });
 
+  /* --- 01 業務システム：スクロールでデモの画面が切り替わる（iframe の # を変えるだけなので別ドメインでも動く） --- */
+  $$('[data-scene="app"]').forEach(function (el) {
+    var screen = $('.deck3d__screen', el), g1 = $('.deck3d__ghost--1', el), g2 = $('.deck3d__ghost--2', el);
+    var cur = $('.deckinfo__cur', el), label = $('.deckinfo__label', el), bar = $('.deck3d__bar', el);
+    var names = ['ダッシュボード', '受注一覧', '受注の詳細', '在庫と発注点', '発注・入荷'];
+    var routes = ['#/', '#/orders', '#/orders/o12', '#/stock', '#/purchase'];
+    var base = (screen.getAttribute('data-live') || '').split('#')[0];
+    var ls = livesIn(el), idx = -1;
+    el.style.setProperty('--h', '380vh');
+    el.style.setProperty('--hm', '300vh');
+    addScene(el, function (s, p) {
+      var t = easeOut(seg(p, 0, .16));
+      screen.style.transform = 'rotateX(' + ((1 - t) * 28).toFixed(2) + 'deg) rotateZ(' + ((1 - t) * -7).toFixed(2) + 'deg) translate3d(0,' + ((1 - t) * 60).toFixed(1) + 'px,0) scale(' + (.86 + t * .14).toFixed(4) + ')';
+      var q = seg(p, .14, .96);
+      var i = Math.min(names.length - 1, Math.floor(q * names.length));
+      var sub = q * names.length - i;
+      var kick = i === names.length - 1 ? 0 : easeInOut(seg(sub, .82, 1));
+      g1.style.transform = 'translate3d(' + (3 + kick * 2).toFixed(2) + '%,' + (4 - kick * 2).toFixed(2) + '%,0) scale(' + (.96 + kick * .02).toFixed(3) + ')';
+      g2.style.transform = 'translate3d(' + (6 + kick * 2).toFixed(2) + '%,' + (8 - kick * 2).toFixed(2) + '%,0) scale(' + (.92 + kick * .02).toFixed(3) + ')';
+      bar.style.setProperty('--p', ((i + 1) / names.length).toFixed(4));
+      if (i !== idx) {
+        var ifr = $('iframe', screen);
+        if (!ifr && i !== 0) return;
+        idx = i;
+        cur.textContent = pad2(i + 1);
+        label.textContent = names[i];
+        if (ifr) ifr.src = base + routes[i];
+      }
+    }, { init: function (s) { s.lives = ls; s.measure = function () { workTarget(s); }; } });
+  });
+
   /* --- 流れる帯（スクロールの速さで加速） --- */
   var mq = $('.mq__track'), mqX = 0, mqW = 0, vel = 0, lastScroll = w.pageYOffset, mqDir = 1, mqOn = false;
   if (mq) {
